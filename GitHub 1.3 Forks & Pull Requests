@@ -1,0 +1,20 @@
+1.3
+Forks ===> clone a Repository from one Account to another Account, make changes without affecting the original Repository  
+For Exmaple :
+I have created a Repository under my Account called "Alexhuang0523" and i fork this Repository(totally same) to another account called "Seyla0317"
+
+Steps to Fork
+Login "Seyla0317" account with Repository URL I have made under account "Alexhuang0523", click "Fork" button 
+
+Pull Request
+For Example :
+After I have made some commits under account "Seyla0317" and I love what i have committed just now 
+so i would like to move the particular committed part back to account "Alexhuang0523"
+As I "Seyla0317" without the authority to do so, therefore I ask would "Alexhuang0523" please pull my request ("Alexhuang0523 is the Main Boss")
+
+Steps to Pull Request
+Under "Seyla0317" account click "New pull request", means telling the original Repository "Alexhuang0523" I have a pull request 
+click "Create pull request" 
+Go back to "Alexhuang0523" account select "pull request" button and click "Merge pull request" 
+Before Merging I can leave a "Thank you" comment for the person who has done the commits for me
+
