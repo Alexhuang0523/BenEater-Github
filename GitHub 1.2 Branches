@@ -1,0 +1,14 @@
+1.2
+GitHub allows users to create new Branches after bunch of commits 
+
+Create new Branch by clicking "Branch" button
+After editing your file select "commit directly to the "Git-A" branch I just created"
+Search for "Insight/Graphs" option -----> Network
+Pull Request & Merge 
+Push = Sending out 
+Pull = Receiving from 
+Merge changes make in "GitHub 1.2 Branches" back to "Master" Branch by clicking "Compare & pull request"
+"Merge pull request" and "confirm" button (From "Master" branch side, it see it as pull)
+
+Conclusion :
+Users are able to merge "several Branches" with commits made by different person in each of the seperate Branches back to "Master" Branch 
