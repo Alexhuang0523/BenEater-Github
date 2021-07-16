@@ -1,0 +1,20 @@
+API stands for application programming interface, it is type of software interface 
+Three catergories : Open API(public), Internal API(Private), Partner API(fees required for use)
+Three types : Local API, Web Service API & Program API
+
+Web Service API consists of REST, SOAP, JSON-RPC & XML-RPC 
+
+For Exmaple :
+If i wish to add GoogleMap and Fringerprint function(two functions) into my APP, it doesn't require me to code these function by myself at all(less duplicate job)
+just copy the API URL made into my APP and run it, done !!!!
+
+Study Materials 
+Online :
+1. Confreaks 
+2. 12 Web APPS in 12 weeks 
+Books :
+1. Design Pattern 
+2. Code Review 
+3. Scrum/TDD/BDD
+4. Pair Programming/Testing 
+5. Algorithm 
