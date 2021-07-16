@@ -1,0 +1,23 @@
+1.4
+Issues is a place to leave a comment about a project
+
+Step :
+Click "Issues" button 
+Submit new Issue
+Use "Snip & Sketch" function from OS (Windows logo + Shift + S) to crop photos or pictures 
+Users can choose "Preview" option to view photos or pictures 
+Users can also choose "Markdown" to design your link or your text style and add "label"
+Open = Create an isuue
+Closed = Issue which is resolved
+Every Issues comes with an issues number (e.g.#10)
+  so if users have solved the issue they should mention the issue code as well 
+  below the issue, there will be a comment of commit
+
+Two ways to close an issue :
+  By clicking "close issue" botton
+  Using the word "fix" in commit description (e.g.This fixes #10)
+
+Users allows to comment on particular commit by reference "Commit Hash Code"(Browser URL) in your commit messages 
+
+Conclusion :
+Hash code & Issues number 
