@@ -1,4 +1,10 @@
 API stands for application programming interface, it is type of software interface 
+
+Concept of API :
+"API" sames like "Electricity" in our home 
+We just plug our "Adapter" into the "Socket" to use the "Electricity", but we have no idea where it comes from 
+and how it comes 
+
 Three catergories : Open API(public), Internal API(Private), Partner API(fees required for use)
 Three types : Local API, Web Service API & Program API
 
