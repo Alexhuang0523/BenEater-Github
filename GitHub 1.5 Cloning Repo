@@ -1,0 +1,63 @@
+1.5
+Git, Install Git software on Desktop 
+
+Basic Commend
+cd , change directory 
+
+Write a "git commit" on Git Repository under Terminal(MAC) means CMD(Windows, download GitBash)
+Clone = Acting of taking a Repository from GitHub Web Server and download to Desktop 
+Desktop can push =====> back to GitHub 
+Desktop can pull <===== from GitHub 
+
+Example :
+git clone http://github.com/Alexhuang0523/My-Blog.git (URL copy from GitHub)   
+  After key in "git clone" CMD will do the cloning . . .
+  Now the Repository already in your Desktop folder, open it with "Notepad" "Sublime text" or other text editor, make some changes 
+git status 
+  Using commend "git status" to view the status of the Repository, users will see a word "modified" 
+  In this stage your Repository not yet commit 
+  Users must make sure the "file directory" when use commend "git status" 
+git commit -a -m "Adding the key of C"   
+  -a means all
+  -m means leave a comment 
+  One more step 
+  After users make a commit, all they need to do is to tell Desktop "who you are", what GitHub account they are logging in  
+git config --global user.name "Alexhuang0523"
+git config --global user.email huangyongjie95@gmail.com
+  After users tell the Desktop who they are, use one commend "git config --list" to check whether the information given is correct 
+git config --list
+  User can also use one commend "git log" to check all commits have made through Desktop CMD 
+git log
+  **Some text editor VIM, will require user to write ":Q" to exit the git log**
+  Everything is done now, next step is to push the Repository back to GitHub we use "git push" 
+git push origin master
+Username for 'https://github.com' : Alexhuang0523
+Password for 'https://Alexhuang0523@github.com' : ****
+  Now the problems is Desktop has no idea where should it push, here comes a new terms "Remote"
+  "Remote" means Web Server GitHub, it can be many "Remote", now we assume only one "Remote"
+git remote -v
+  Use commend 'git remote" to check your remote name 
+  After users get their remote name "origin" they need to put the name after "git push"
+  Don't forget the Branches name "Master" as well 
+  Final step
+  after mentions the Remote and Branch name, user needs to key thier username and password for Desktop to identify your account 
+  **Pay attention to which GitHub account(username and eamil) users are logging in**
+  
+ Conclusion :
+ Create a new Repository on GitHub, clone it to Desktop make changes to it and push it back to GitHub
+
+  
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
