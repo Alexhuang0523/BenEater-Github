@@ -40,7 +40,7 @@ git remote -v
   After users get their remote name "origin" they need to put the name after "git push"
   Don't forget the Branches name "Master" as well 
   Final step
-  after mentions the Remote and Branch name, user needs to key thier username and password for Desktop to identify your account 
+  After mentions the Remote and Branch name, users need to key thier username and password for Desktop to identify thier account
   **Pay attention to which GitHub account(username and eamil) users are logging in**
   
  Conclusion :
