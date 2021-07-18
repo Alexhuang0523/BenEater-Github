@@ -36,7 +36,7 @@ Password for 'https://Alexhuang0523@github.com' : ****
   Now the problems is Desktop has no idea where should it push, here comes a new terms "Remote"
   "Remote" means Web Server GitHub, it can be many "Remote", now we assume only one "Remote"
 git remote -v
-  Use commend 'git remote" to check your remote name 
+  Use commend 'git remote" to check your Remote URL more details  
   After users get their remote name "origin" they need to put the name after "git push"
   Don't forget the Branches name "Master" as well 
   Final step
