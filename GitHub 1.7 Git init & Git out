@@ -1,0 +1,58 @@
+1.7
+Processing :
+Users make a project in thier Desktop or Laptop maybe for a week or  a month, 
+suddenly they want to turn this project or this folder to a Git Repository and push it to GitHub 
+
+Example :
+cd
+  Find the folder directory(folder location) in CMD
+git status 
+  Use "git status" commend to whether there is a Git Repository 
+git init 
+  If the folder is not a Git Repository, use "git init" commend to initialize a empty Git Repository
+  After "git init" commend use "git status" commend to check the folder status again
+  In CMD it will mention "dance.txt", file which users have amended on thier Desktop 
+git add dance.txt
+  Here comes a terms called staging, when users only want to commit certain files not all files 
+  "git add" commend will be applied, for example if users have changed 5 files on thier Desktop
+  but they just want to commit 3 files instead of all the files, in this situation "git add" is used  
+  a sentence of "nothing added to commit untracked files present" may appear in CMD
+  "git add" will add the files users want to commit to the "staging area" and commit those files 
+  Finally, a "Git Repository" is made
+git commit -m "adding a new dance"
+git remote add origin https://github.com/Alexhuang0523/My-Blog.git
+  Now here we need to create a "Remote" means Repository on GitHub Web Server 
+  as Desktop have no idea where to push, the reason why we need to create a new Repository is 
+  because now we are creating files in our Desktop not on GitHub 
+  so there is no Remote attached 
+ git remote 
+  Users can use "git remote" commend to to check the Remote name, in here remote's name called 
+  "origin" as we have named it as origin 
+ git remote -v
+  Users can also use "git remote -v" commend to to check the Remote URL 
+ git push origin master 
+ git pull origin master 
+  After we push the file to GitHub and make some commit now we pull it back to our Desktop again 
+  with commend "git pull origin master"
+  **Pay attention if users are doing the push pull action in the same stage CMD will not require 
+  user to key in username and userpassword, what if users restart the Desktop and do it again 
+  users need to key in username and userpassword again**
+  
+  
+  
+
+
+   
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+
+
+
