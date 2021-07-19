@@ -16,11 +16,14 @@ Go to Settings ====> GitHub Pages serching for the Page URL
   Web Pages will show "404 not found" if there is no file 
 After creating new file, go to browser write Alexhuang0523.github.io/BlogWebsite/API.txt
 Pages will show your file details 
-  If users create a file with "HTML" format which is not the format GitHub using  
+  "HTML" format files can be shown in GitHub pages as well
+  Users are allowed to edit thier files with HTML format in thier Repository 
+  Pay attention when users clone the GitHub pages to thier Desktop 
+  the moment they push back to GitHub, the origin Branch no longer "Master"
+  it becomes "gh-pages", this section needs to be paid attention 
 
-
-   
-
+Conclusion :
+GitHub allows users to create a Web Pages 
 
 
 
