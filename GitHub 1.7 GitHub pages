@@ -1,0 +1,28 @@
+1.7
+Switch a Github Repository into a web pages on using GitHub
+GitHub allows users to view a project in a the form of web page
+
+Key word is Branch, need to create a new Branch
+
+Steps :
+Create a new Repository and name it "PoemWebsite"
+Description : This poem will be on the world wide web
+Initailize README
+Create a new branch called "gh-pages"
+  Make "gh-pages" as Default Branch
+Go to Settings =====> Branches, switch Default Branch to "gh-pages"
+  Users are able to delete Master Branch not used by selecting "Branch" button 
+Go to Settings ====> GitHub Pages serching for the Page URL 
+  Web Pages will show "404 not found" if there is no file 
+After creating new file, go to browser write Alexhuang0523.github.io/BlogWebsite/API.txt
+Pages will show your file details 
+  If users create a file with "HTML" format which is not the format GitHub using  
+
+
+   
+
+
+
+
+
+
