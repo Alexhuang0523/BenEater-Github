@@ -25,13 +25,13 @@ git remote add origin https://github.com/Alexhuang0523/My-Blog.git
   as Desktop have no idea where to push, the reason why we need to create a new Repository is 
   because now we are creating files in our Desktop not on GitHub 
   so there is no Remote attached 
- git remote 
+git remote 
   Users can use "git remote" commend to to check the Remote name, in here remote's name called 
   "origin" as we have named it as origin 
- git remote -v
+git remote -v
   Users can also use "git remote -v" commend to to check the Remote URL 
- git push origin master 
- git pull origin master 
+git push origin master 
+git pull origin master 
   After we push the file to GitHub and make some commit now we pull it back to our Desktop again 
   with commend "git pull origin master"
   **Pay attention if users are doing the push pull action in the same stage CMD will not require 
