@@ -7,7 +7,7 @@ Example :
 cd
   Find the folder directory(folder location) in CMD
 git status 
-  Use "git status" commend to whether there is a Git Repository 
+  Use "git status" commend to check whether there is a Git Repository 
 git init 
   If the folder is not a Git Repository, use "git init" commend to initialize a empty Git Repository
   After "git init" commend use "git status" commend to check the folder status again
