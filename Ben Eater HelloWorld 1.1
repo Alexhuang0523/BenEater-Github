@@ -47,28 +47,21 @@ x means Hexidecimal
 %04x means 4 Hex-number digits (Addressline)
 %02x means 2 Hex-number digits (Dataline)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //serial.print("    ") means "Space"
+
+At this moment, Microprocessor is reading "Data" but which is meaningless 
+reading "Garbage" 
+
+Setting "Default value", connecting those data pins to predictable signal 
+Tieing each data bit to Ground/Negative or to 5 Volt/Positive through a 
+1K resistors 
+Now the "Default value" of Dataline becomes 11101010
+1: Tie to 5 Volt
+0 : Tie to Ground 
+
+
+
+
 
 
 
