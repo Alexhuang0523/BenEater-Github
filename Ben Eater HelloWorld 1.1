@@ -55,10 +55,23 @@ reading "Garbage"
 Setting "Default value", connecting those data pins to predictable signal 
 Tieing each data bit to Ground/Negative or to 5 Volt/Positive through a 
 1K resistors 
-Now the "Default value" of Dataline becomes 11101010
+Now the "Default value" of Dataline becomes 11101010 
 1: Tie to 5 Volt
 0 : Tie to Ground 
 
+"OP Code Matrix Table" describes Instructions 
+ea means no operations (No Instruction)
+"Addressing Mode Table" describes 2 clock cycles 
+
+Reset(RESB) describes the starting location where Mircoprocessor reads 
+FFFC FFFD 
+1111111111111100 11101010 fffc r ea 
+1111111111111101 11101010 fffd r ea 
+
+Conclusion of Part 1 :
+Microprocessor is now initializing, it is trying to execute instructions,
+but now we are not feeding it instructions, it is hardwiring the no op 
+instruction
 
 
 
