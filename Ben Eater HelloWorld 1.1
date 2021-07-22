@@ -64,9 +64,11 @@ ea means no operations (No Instruction)
 "Addressing Mode Table" describes 2 clock cycles 
 
 Reset(RESB) describes the starting location where Mircoprocessor reads 
-FFFC FFFD 
-1111111111111100 11101010 fffc r ea 
-1111111111111101 11101010 fffd r ea 
+FFFC FFFD ea 
+
+Addressline(B)    Dataline(B)   Addressline(Hx)   R/E   Dataline(Hx)
+1111111111111100  11101010         fffc            r       ea 
+1111111111111101  11101010         fffd            r       ea 
 
 Conclusion of Part 1 :
 Microprocessor is now initializing, it is trying to execute instructions,
