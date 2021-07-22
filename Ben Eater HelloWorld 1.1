@@ -1,5 +1,5 @@
 1.1
-Microprocessor
+Microprocessor, Clock Circuit, & Arduino Mega 
 
 Today we learn how to capture "Data" from a Microprocessor W65C025
 
@@ -10,7 +10,7 @@ VSS : Ground/Negative
 A0-A15 : Addressline
 D0-D7 : Dataline, Dataline can be "Input" or "Output"
 Reset : A button to reset the Microprocessor
-Clock Input 
+Clock Circuit Input 
 RWB : This describes whether a Micrproocessor is using the "Data Pins" for "Input" or "Output"
       Low, Data pins are "Output" Writting
       High, Data pins are "Input" Reading 
@@ -19,7 +19,7 @@ At first, we tie all the "Input data pins" to Ground/Negative, later we will tie
 "Output data pins" to Arduino for "capturing Data"
 
 Microprocessor W65C025 is fully static design thus it allows us to stop and single-step 
-the clock 
+the Clock Circuit 
 
 We can read the "Output data pin" in the form of Binary "01010" by using LED light 
 light on = 1
@@ -27,19 +27,19 @@ light off = 0
 Tieing "LED light" to "A0-A15" Dataline and to "Ground"/Negative throgh "Resistors" 
 LED Light + A0-A15 + Resistors ===> Ground
 
-Codes in Arduino :
-//16 Addressline pin numbers from "Arduino digital I/O pins"
+Programming in Arduino Mega :
+//16 Addressline pin numbers from "Arduino Mega digital I/O pins"
 const char ADDR[] = {22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52} 
 
-//8 Dataline pin numbers from "Arduino digital I/O pins"
+//8 Dataline pin numbers from "Arduino Mega digital I/O pins"
 const char DATA[] = {39, 41, 43, 45, 47, 49, 51, 53} 
 
 //We "compute and print" the "Data" in the form of "Hexidecimal" instaed of "Binary"
-code : %04x   %c   %02x 
+Program : %04x   %c   %02x 
 No negative figues 
-code : unsigned int address = 0;
+Program : unsigned int address = 0;
 Computing means an act or process of calculating an answer by using machine 
-code : address = (address << 1) + bit;  
+Program : address = (address << 1) + bit;  
 Bit comes from code : int bit = digitalRead(ADDR[n])?1:0
 % means Binary 
 x means Hexidecimal
@@ -47,7 +47,7 @@ x means Hexidecimal
 %04x means 4 Hex-number digits (Addressline)
 %02x means 2 Hex-number digits (Dataline)
 
-//serial.print("    ") means "Space"
+Program : serial.print("    ") means "Space"
 
 At this moment, Microprocessor is reading "Data" but which is meaningless 
 reading "Garbage" 
