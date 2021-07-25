@@ -1,1 +1,23 @@
+SR Latch 
+Chips : 4 Input Pins 4 Output Pins 1 Volt 1 Ground 
+
+OR Gates  
+A (Switch tie to Input A)  
+B (Output tie to Input B)
+A B  Output 
+0 0     0
+0 1     1
+1 0     1
+1 1     1
+Conclusion : 
+Once switch being turned on Datas become Memories
+unless switch is turned off 
+
+NOR Gates
+A1
+B1
+A2
+B2
+
+
 
