@@ -1,0 +1,46 @@
+# 1
+SR Latch 
+Chips : 4 Input Pins 4 Output Pins 1 Volt 1 Ground 
+
+OR Gates  
+A (Switch ===> Input A)  
+B (Output ===> Input B)
+Output (Output ===> Input B)
+A B  Output 
+0 0    0
+0 1    1
+1 0    1
+1 1    1
+NOR Gates
+A1 (Switch ===> Input A1)   R
+B1 (Output2 ===> B1)
+Output1 (Output1 ===> B2)   Q
+A2 (Switch ===> Input A2)   S
+B2 (Output1 ===> B2)
+Output2 (Output2 ===> B1)   -Q
+A B  Output 
+0 0    1
+0 1    0
+1 0    0
+1 1    0
+
+# 2
+SR Latch with enable Circuit
+2 AND Gates, 2 NOR Gates, 1 Enable 
+Enable (Switch ===> Enable)
+Conclusion : Switch on "Enable" only can do "Reset" 
+
+# 3
+D Latch 
+2 AND Gates, 2 NOR Gates, 1 Enable, 1 Inverter  
+Inverter 
+A1 (Switch ===> Input A1 of NOR Gates)
+A2 (Switch ===> Input A2 of NOR Gates)
+Output of NOR Gates
+Conclusion : with "Inverter", we are able to see the result of 
+             "Output" when we change "Input"
+             We can store "Data" either "1" or "0" 
+             
+
+    
+    
