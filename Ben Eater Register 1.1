@@ -1,3 +1,6 @@
+Register 
+Instruction Register 
+
 Bus Transfer 
 It allows "Modules" to communicate with each other 
 "Modules"can put data on the bus and read data from the bus 
@@ -8,9 +11,11 @@ Output
 
 Tri-state logic 
 1, 0, Disable (avoid Input data & Output data conflicts on Bus Transfer) 
-Enable (High) = Output data 
-Load (High) = Read data 
+Load (High) Enable (High) = Store data in register 
+Load (High) Enable (Low)  = Put data to bus 
+Load (Low) Enable (High)  = Read data from bus 
 
+Inside the chips : 
 Current direction in Transistor 
 Source 1 = 5 Volt ===> Transistor ===> Output 
 Sink 0   = Output ===> Transistor ===> Ground 
