@@ -1,0 +1,26 @@
+ROM (EEPROM AT28C256) 
+Program with some different "Instructions" using different "Addresses" 
+instead of using Resistors 
+
+Processor x16 Addressline 
+EEPROM    x15 Addressline
+NAND Gate
+Adapter (Latch)
+
+When the Processor reads all Addressline A0-A15, it will see the contents 
+of the EEPROM as repeated twice 
+
+
+Connect "Processor A15 line" High to the "Chip Enable Signal of EEPROM" with
+"NAND Gate" 
+A15 Line Low : EEPROM will output Data(D0-D7) as Processor read A0-A14 
+A15 Line High : EEPROM will not output any Data(D0-D7) as Processor read A15  
+
+Now Processor is reading low A0-A14 Addressline 
+Adjust the starting location of Processor becomes ea ===> 8,000 (Dataline)
+rom[0x7ffc] = 0x00
+rom[0x7ffd] = 0x80
+Example : 
+ea ea ea ea ea ea ea ea ea ea ea ea 00 80 ea ea 
+
+
