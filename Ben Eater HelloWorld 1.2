@@ -8,19 +8,38 @@ NAND Gate
 Adapter (Latch)
 
 When the Processor reads all Addressline A0-A15, it will see the contents 
-of the EEPROM as repeated twice 
-
+of the EEPROM as repeated twice A0-A14, A15
 
 Connect "Processor A15 line" High to the "Chip Enable Signal of EEPROM" with
 "NAND Gate" 
 A15 Line Low : EEPROM will output Data(D0-D7) as Processor read A0-A14 
 A15 Line High : EEPROM will not output any Data(D0-D7) as Processor read A15  
 
+Programming EEPROM : 
 Now Processor is reading low A0-A14 Addressline 
-Adjust the starting location of Processor becomes ea ===> 8,000 (Dataline)
+Adjust the starting location of executing instruction becomes ea ===> 8,000 (Dataline)
+read by Processor 
 rom[0x7ffc] = 0x00
 rom[0x7ffd] = 0x80
 Example : 
 ea ea ea ea ea ea ea ea ea ea ea ea 00 80 ea ea 
+
+*Operation, Operation Codes and Status Register*
+a9 = load particular immediate value to Register A 
+8d = store particular immediate value at particular address 
+if we want to load 42 value to Register A code as below :
+rom[0] = 0xa9
+rom[1] = 0x42
+if we want to store particular immediate value at particular address code as below :
+rom[2] = 0x8d
+rom[3] = 0x00
+rom[4] = 0x60
+
+6000 W 42
+Now Processor is putting 42 value to the Transfer Bus not done by "EPPROM"
+and latch value of 42 into a Register 
+
+
+*Memory Map of Internal Register* for Adapter (Latch)
 
 
