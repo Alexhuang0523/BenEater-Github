@@ -15,7 +15,7 @@ Connect "Processor A15 line" High to the "Chip Enable Signal of EEPROM" with
 A15 Line Low : EEPROM will output Data(D0-D7) as Processor read A0-A14 
 A15 Line High : EEPROM will not output any Data(D0-D7) as Processor read A15  
 
-Programming EEPROM : 
+#1   Programming EEPROM : 
 Now Processor is reading low A0-A14 Addressline 
 Adjust the starting location of executing instruction becomes ea ===> 8,000 (Dataline)
 read by Processor 
@@ -37,9 +37,21 @@ rom[4] = 0x60
 
 6000 W 42
 Now Processor is putting 42 value to the Transfer Bus not done by "EPPROM"
-and latch value of 42 into a Register 
+we can latch value of 42 into a Register or any Hardware  
 
-
+#2    Adapter 
+In order to capture "Address 6000 W 42" outputted by Processor 
+Connect Processor to Adapter(Latch) CS1 CS2 with two NAND Gates    
+0 1 1
 *Memory Map of Internal Register* for Adapter (Latch)
+
+
+
+
+
+
+
+
+
 
 
