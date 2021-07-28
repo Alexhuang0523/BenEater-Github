@@ -27,6 +27,7 @@ ea ea ea ea ea ea ea ea ea ea ea ea 00 80 ea ea
 *Operation, Operation Codes and Status Register*
 a9 = load particular immediate value to Register A 
 8d = store particular immediate value at particular address 
+4c = jumping 
 if we want to load 42 value to Register A code as below :
 rom[0] = 0xa9
 rom[1] = 0x42
@@ -43,12 +44,24 @@ we can latch value of 42 into a Register or any Hardware
 In order to capture "Address 6000 W 42" outputted by Processor 
 Connect Processor to Adapter(Latch) CS1 CS2 with two NAND Gates    
 0 1 1
+
 *Memory Map of Internal Register* for Adapter (Latch)
+6000 = Output Register 
+6002 = Data Direction Register B
+*ORB, IRB Operation for Register*
+ff (1111 1111) = Set as output 
+Steps :
+Setting anything stored in Register port B to be output of LED light code as below :
+0xa9 0xff
+0x8d 0x02 0x60
+Outputting anything from Register B code as below :
+0xa9 0x55
+0x8d 0x00 0x60
 
-
-
-
-
+0xa9 0xaa
+0x8d 0x00 0x60
+Jumping to Address 8000 code as below : 
+0x4c 0x00 0x80
 
 
 
