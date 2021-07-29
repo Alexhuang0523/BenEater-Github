@@ -1,11 +1,58 @@
-Transistors structure :
-
+3 Transistor Components :
 Emitter --->
 Base
 Collector 
 
-Inveter 
+8 Logic Gates :
+Buffer 
+Input Output
+  0     0
+  1     1
+Inveter (1 Transistor)
+Switch ===> Inverter (change Current Flow) ===> Ground 
 Input Output
   1     0
   0     1
-  
+AND Gate (2 Transistors)
+Switch ===> A Transistor Emittrt ===> B Transistor Collector ===> Ground 
+A B  Output 
+0 0    0
+0 1    0
+1 0    0
+1 1    1
+NAND Gate
+A B  Output 
+0 0    1
+0 1    1
+1 0    1
+1 1    0
+OR Gate (2 Transistors)
+Switch ===> A Transistor Collector ===> B Transistor Collector ===> Ground
+A B  Output 
+0 0    0
+0 1    1
+1 0    1
+1 1    1
+NOR Gate
+A B  Output 
+0 0    1
+0 1    0
+1 0    0
+1 1    0
+XOR Gate (5 Transistors)
+OR Gate ===> Transistor ===> AND Gate
+A B  Output 
+0 0    0
+0 1    1
+1 0    1
+1 1    0
+XNOR Gate
+A B  Output 
+0 0    1
+0 1    0
+1 0    0
+1 1    1
+
+
+
+
