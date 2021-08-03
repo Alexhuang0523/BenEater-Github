@@ -2,6 +2,7 @@ D Flip-flop
 Common way of storing Data in Digital Logic Circuit 
 
 Flip-flop means Output only change when there is a Pulse 
+0 ===> 1 ===> 0
 
 Element :
 Clock 
@@ -10,10 +11,18 @@ EN Input
 Output 
 
 How to build an Edge Detector Circuit for Clock Signal 
-Add "Capasitor" & "Resistor" before Enable Input  
+# 1 Method 
+5 Volts ===> Switch button ===> Capasitor ===> 2 Resistors ===> Ground  
+Capasitor + Resistor makes the output change from 1 to 0 immediately  
+Capasitor absorbs electrons 
+Resistor resists electric current 
 
-Speed of Input ===> AND Gate "faster than" Speed of Input ===> Inverter ===> AND Gate 
-Difference of speed makes a pulse which is Clock Signal
+# 2 Method
+Inverter + AND Gate 
+Input ===> AND Gate   >   Input ===> Inverter ===> AND Gate 
+When these two Input change from 0 to 1
+The different speed of these two Inputs make a Pulse, Clock Signal 
+0 ===> 1 ===> 0
 
 
 
