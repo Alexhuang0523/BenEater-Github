@@ -1,10 +1,10 @@
 Register 
-Inverter + 2 AND Gates + 2 OR Gates + D Latch  
-
+Inverter + 2 AND Gates + 1 OR Gate + D Latch  
 
 Tri-state logic (2 Transistors) for Bus Transfer 
 1, 0, Disable 
-Register + Tri-state buffer 
+Load (Invert logic line) + Register (always Output) ===> Tri-state buffer + Enable line (Invert logic line)
+Low (Register load data from Bus)                                           High (Disconnect) Low (Output)
 
 Bus Transfer 
 It allows Modules to communicate with each other 
