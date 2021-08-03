@@ -4,7 +4,8 @@ Inverter + 2 AND Gates + 1 OR Gate + D Latch
 Tri-state logic (2 Transistors) for Bus Transfer 
 1, 0, Disable 
 Load (Invert logic line) + Register (always Output) ===> Tri-state buffer + Enable line (Invert logic line)
-Low (Register load data from Bus)                                           High (Disconnect) Low (Output)
+Low (Register load data from Bus)                                           High (Disconnect/no Output) 
+High (Turn off load/Store Data in Register)                                 Low (Output Data to Bus from Register)
 
 Bus Transfer 
 It allows Modules to communicate with each other 
