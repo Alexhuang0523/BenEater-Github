@@ -1,12 +1,14 @@
 EEPROM
 Addressline ===> Switch ===> Resistor ===> Ground 
-Dataline ===> LED ===> Resistor ===> Ground
+Dataline(D0-D7) ===> LED ===> Resistor ===> Ground
 
 Chip Enable ===> Ground/Low ~ Enabled  
 Write Enable (Programming) ===> RC Circuit  
-*AC Write Waveforms* 100 ~ 1000 5 Volts ===> Switch Button ===> Capacitor 
+*AC Write Waveforms* 100~1000   5 Volts ===> Switch Button ===> Capacitor 
                                 ===> Resistor ===> Ground 
                                 Capacitor and Resistor used to control Timing 
                             
 Output Enable ===> Low/Ground, Datalines become Output 
                    High/5 Volts, Datalines become Input 
+
+
