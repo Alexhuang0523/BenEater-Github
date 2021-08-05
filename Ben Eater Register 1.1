@@ -43,9 +43,14 @@ Adding (+) Subtracting (-)
 
 Adder 
 #  1 XOR Gate 
+ A  B  Sum(Output) Carry 
+ 0  0       0        0      
+ 0  1       1        0
+ 1  0       1        0
+ 1  1       0        1
 B Input High = Subtracting (Carry) 
 B Input Low = Adding (No Carry)
-#  2 Carry Bit
+#  2 Carry Bit  0 = Positive 1 = Negative 
 
 Building ALU 
 Register A ===> Adder ====================\ 
