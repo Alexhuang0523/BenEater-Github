@@ -16,7 +16,8 @@ As Processor reads Upper space (A15=high/1) + Inverter/AND Gate ===> (Enable Chi
 CE(Active low) will activate the EEPROM and output Data even Processor reads upper space 
 Due to the design of chip we use Inverter/AND Gate to activate the enable signal 
 
-#1   Programming EEPROM : 
+EEPROM <===> Processor  
+#1 Programming EEPROM    
 Now Processor is reading low A0-A14 Addressline 
 Adjust the starting location of executing instruction becomes ea ===> 8,000 (Dataline)
 read by Processor 
@@ -43,7 +44,8 @@ we can latch value of 42 into a Register or any Hardware
 Example :
 6000 W 42
 
-#2    Adapter(Latch) 
+Adapter(Latch) <===> AND Gate <===> Processor 
+#2   CS1 CS2
 For Adapter to find "Addressline 6000" connecting Processor Addressline to 
 Adapter CS1(Active high) CS2(Active low) signal with two AND Gates when
 signal are enabled Adapter will pay attention to the data bus "W 42"
@@ -56,9 +58,14 @@ A13 1 =====> 1 CS1
 Binary 0110 0000 0000 0000  
 Hexidecimal 6000 
 
-*Memory Map of Internal Register* for Adapter(Latch)
-6000 = Output Register 
-6002 = Data Direction Register B
+#3    Register Pin  
+*Memory Map of Internal Register*
+A15 A14 A13 <===> CS2 CS1     6000 = Output Register 
+A3 ====> RS3
+A2 ====> RS2
+A1 ====> RS1                  6002 = Data Direction Register B
+A0 ====> RS0                  6001    
+
 *ORB, IRB Operation for Register*
 ff (1111 1111) = Set as output 
 Steps :
@@ -74,7 +81,7 @@ Outputting anything from Register B code as below :
 Jumping to Address 8000 code as below : 
 0x4c 0x00 0x80
 
-#3    LCD Interface
+#4    LCD Interface
 Each Hardware comes with a Datasheet of Instruction for connecting to computer (Binary) 
 for example :
 Clear display
