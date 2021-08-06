@@ -7,14 +7,14 @@ Processor x16 Addressline + EEPROM x15 Addressline + NAND Gate + Adapter(Latch)
 When the Processor reads all Addressline A0-A15, it will see the contents 
 of the EEPROM as repeated twice A0-A14, A15
 
-Connect "Processor A15 line" High to the "Chip Enable Signal of EEPROM" with
-"NAND Gate" 
+Connect "Processor A15 line" to the "Chip Enable Signal of EEPROM" with "AND Gate" 
 As Processor reads Lower space (A15=low/0) (Chip Enable=0)
 EEPROM will output Data (D0-D7) 
 As Processor reads Upper space (A15=high/1) (Chip Enable=1)
 EEPROM will not output Data (D0-D7)
 As Processor reads Upper space (A15=high/1) + Inverter/AND Gate ===> (Enable Chip=low/0)  
-0 CE will activate the EEPROM and output Data even Processor reads upper space (Design of Chip) 
+CE(Active low) will activate the EEPROM and output Data even Processor reads upper space 
+Due to the design of chip we use Inverter/AND Gate to activate the enable signal 
 
 #1   Programming EEPROM : 
 Now Processor is reading low A0-A14 Addressline 
