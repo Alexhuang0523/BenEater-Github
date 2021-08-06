@@ -44,10 +44,14 @@ Example :
 6000 W 42
 
 #2    Adapter 
-In order to capture "Addressline" 6000
-W 42 outputted by Processor 
-Connect Processor to Adapter(Latch) CS1 CS2 with two NAND Gates    
-0 1 1
+In order to find "Addressline 6000" connect Processor Addressline to 
+Adapter(Latch) CS1(Active high) CS2(Active low) signal with two AND Gates when
+are enabled Adapter(Latch) will pat attention to the data bus "W 42"
+A15 ===\ 
+        ===> CS2     
+A14 ===/   
+A13 =======> CS1
+
 
 *Memory Map of Internal Register* for Adapter (Latch)
 6000 = Output Register 
