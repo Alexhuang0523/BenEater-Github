@@ -43,17 +43,20 @@ we can latch value of 42 into a Register or any Hardware
 Example :
 6000 W 42
 
-#2    Adapter 
-In order to find "Addressline 6000" connect Processor Addressline to 
-Adapter(Latch) CS1(Active high) CS2(Active low) signal with two AND Gates when
-are enabled Adapter(Latch) will pat attention to the data bus "W 42"
+#2    Adapter(Latch) 
+For Adapter to find "Addressline 6000" connecting Processor Addressline to 
+Adapter CS1(Active high) CS2(Active low) signal with two AND Gates when
+signal are enabled Adapter will pay attention to the data bus "W 42"
 A15 0 ===\ 
         ===> 0 CS2     
 A14 1 ===/   
 A13 1 =====> 1 CS1
 
+      Addressline
+Binary 0110 0000 0000 0000  
+Hexidecimal 6000 
 
-*Memory Map of Internal Register* for Adapter (Latch)
+*Memory Map of Internal Register* for Adapter(Latch)
 6000 = Output Register 
 6002 = Data Direction Register B
 *ORB, IRB Operation for Register*
