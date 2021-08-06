@@ -64,22 +64,23 @@ A15 A14 A13 <===> CS2 CS1     6000 = Output Register
 A3 ====> RS3
 A2 ====> RS2
 A1 ====> RS1                  6002 = Data Direction Register B
-A0 ====> RS0                  6001    
+A0 ====> RS0                  6001 
 
-*ORB, IRB Operation for Register*
-ff (1111 1111) = Set as output 
-Steps :
-Setting anything stored in Register port B to be output of LED light code as below :
-0xa9 0xff
-0x8d 0x02 0x60
-Outputting anything from Register B code as below :
-0xa9 0x55
-0x8d 0x00 0x60
+*ORB, IRB Operation for Register* 
+0xff = 1111 1111 
+       8 Pins to be Output tie to LED  
 
-0xa9 0xaa
-0x8d 0x00 0x60
-Jumping to Address 8000 code as below : 
-0x4c 0x00 0x80
+Steps for setting Instruction :
+   Setting Data Direction Register B code 
+       0xa9 0xff        #load ff
+       0x8d 0x02 0x60   #store at Register 6002
+   Setting Output Register B code 
+       0xa9 0x55
+       0x8d 0x00 0x60
+       0xa9 0xaa
+       0x8d 0x00 0x60
+   Setting jumping to Address 8000 code
+       0x4c 0x00 0x80
 
 #4    LCD Interface
 Each Hardware comes with a Datasheet of Instruction for connecting to computer (Binary) 
