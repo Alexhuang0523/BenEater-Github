@@ -1,8 +1,14 @@
 Processor + EEPROM + RAM + AND gate + LCD Interface + Capacitor + Oscillator 
 
 # 1
-LCD Interface 
-16 Pins 
+LCD Interface (16 Pins)
+*Block Diagram*
+
+Programming Adapter :
+PORT B = $6000
+PORT A = $6001
+
+
 
 
 # 
@@ -21,6 +27,4 @@ Processor <===> ROM <===> RAM
       RAM Low A0-A14
 Timing for Processor to read or write Data (Input & Output)
 
-LOOP
-Bus flag = send instruciton to LCD when not busy(Megahurtz)
 
