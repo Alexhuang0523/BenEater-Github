@@ -11,6 +11,8 @@ RS = %00100000
 
  .org $8000
 reset :
+  ldx #$ff            ; Set stack pointer at FF
+  txs    
   lda #%11111111      ; Set all pins on port B to output 
   sta DDRB
   lda #%11100000      ; Set top 3 pins on port A to output 
