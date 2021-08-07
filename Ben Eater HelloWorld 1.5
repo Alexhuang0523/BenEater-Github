@@ -17,7 +17,7 @@ reset :
   sta DDRA
   
   lda #%00111000      ; Set 8-bit mode; 2-line display 5x8 font
-  jsr lcd_instruction
+  jsr(20) lcd_instruction
   lda #%00001110      ; Display on; cursor on; blink off 
   jsr lcd_instruction
   lda #%00000110      ; Increment and shift cursor; don't shift display 
@@ -37,18 +37,21 @@ reset :
 loop:
   jump loop     ($8005) 
 
-lcd_instruction :  
-  sta PORT B
+lcd_instruction(805d) :   
+  sta(8d) PORT B
   lda #0              ; Clear RS/RW/E bits 
   sta PORT A 
   lda #E              ; Set E bit to send instruction 
   sta PORT A 
   lda #0              ; Clear RS/RW/E bits 
   sta PORT A 
-  rts 
-
+  rts   (0124 R 5d
+        (0124 W 80   
+        (0123 W 0e) Processor takes fews clock cycle to save "Return Address" 
+                    now we need a RAM to capture Output of Processor 
+      
 print_char :
-   sta PORT B
+  sta PORT B
   lda #RS             ; Set RS; Clear RW/E bits; Sending Data 
   sta PORT A 
   lda #(RS | E)       ; Set E bit to send instruction 
