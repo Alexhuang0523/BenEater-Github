@@ -26,7 +26,7 @@ reset :
   lda #$55    
   sta $6000
 loop:
-  ror           (sta #$aa) Shifting pattern to right and rotating    
+  ror           (Instruction) Shifting pattern to right and rotating   
   sta $6000
   jump loop     ($8005) 
 
