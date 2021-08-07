@@ -1,33 +1,31 @@
-VASM
-Machine/Assembly language <===> Binary language 
+Assembly language <===> Machine code 
+             VASM 
+portable and retargetable assembler 
 
-Processor + EEPROM + RAM + AND gate +
-LCD interface + Capacitor + Oscillator 
+Download "Source code" from "Last release source"
 
-# 1
-RAM 
-Install RAM for "Stack" function (Assembly language)
-for better coding 
-# 2
-Capacitor 
-It is used to control the Stability of "Voltage" & "Current Flow"
-# 3
-Oscillator 
-It is related to "Megahertz" ~ Speed 
-Busy flag 
+#1  Command on CMD 
+make CPU=6502 SYNTAX=oldstyle 
+vasm6502_oldstyle blink.s                 (Text file)
+cat a.out  
+vasm6502_oldstyle -Fbin blink.s           (Binary file) 
+cat a.out 
+hexdump -C a.out 
+hexdump -C rom.bin                        (Indentify what is in EEPROM)
+vasm6502_oldstyle -Fbin -dotbir blink.s   (.word)
 
-  Bus Timing (Transfer Bus)
-Processor <===> ROM <===> RAM
-       ROM High A15
-      RAM Low A0-A14
-Timing for Processor to read or write Data (Input & Output)
+#2  Packaging Machine code ===> Assembly language : 
+  .org $8000
+reset :
+  lda #$ff    
+  sta $6002
+  lda #$55    
+  sta $6000
+loop:
+  ror           (sta #$aa) Shifting pattern to right and rotating    
+  sta $6000
+  jump loop     ($8005) 
 
-LOOP
-Bus flag = send instruciton to LCD when not busy(Megahurtz)
-
-
-
-
-
-
-
+  .org $fffc
+  .word reset   ($8000)
+  .word $0000
