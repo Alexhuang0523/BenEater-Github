@@ -1,30 +1,104 @@
-Processor + EEPROM + RAM + AND gate + LCD Interface + Capacitor + Oscillator 
+Processor + EEPROM + AND Gate + Adapter + LCD Interface 
 
-# 1
 LCD Interface (16 Pins)
 *Block Diagram*
+*Instruction*           
 
 Programming Adapter :
 PORT B = $6000
 PORT A = $6001
+DDRB = $6002
+DDRA = $6003
 
+E = %10000000
+RW = %01000000
+RS = %00100000
 
+ .org $8000
+reset :
+  lda #%11111111      ; Set all pins on port B to output 
+  sta DDRB
+  lda #%11100000      ; Set top 3 pins on port A to output 
+  sta DDRA
+  
+  lda #%00111000      ; Set 8-bit mode; 2-line display 5x8 font
+  sta PORT B
+  lda #0              ; Clear RS/RW/E bits 
+  sta PORT A 
+  lda #E              ; Set E bit to send instruction 
+  sta PORT A 
+  lda #0              ; Clear RS/RW/E bits 
+  sta PORT A 
+  
+  lda #%00001110      ; Display on; cursor on; blink off 
+  sta PORT B
+  lda #0              ; Clear RS/RW/E bits 
+  sta PORT A 
+  lda #E              ; Set E bit to send instruction 
+  sta PORT A 
+  lda #0              ; Clear RS/RW/E bits 
+  sta PORT A 
+  
+  lda #%00000110      ; Increment and shift cursor; don't shift display 
+  sta PORT B
+  lda #0              ; Clear RS/RW/E bits; Sending Instruction   
+  sta PORT A 
+  lda #E              ; Set E bit to send instruction 
+  sta PORT A 
+  lda #0              ; Clear RS/RW/E bits 
+  sta PORT A 
+  
+  lda #"H"
+  sta PORT B
+  lda #RS             ; Set RS; Clear RW/E bits; Sending Data 
+  sta PORT A 
+  lda #(RS | E)       ; Set E bit to send instruction 
+  sta PORT A 
+  lda #RS             ; Clear E bits 
+  sta PORT A 
+  
+  lda #"e"
+  sta PORT B
+  lda #RS             ; Set RS; Clear RW/E bits 
+  sta PORT A 
+  lda #(RS | E)       ; Set E bit to send instruction 
+  sta PORT A 
+  lda #RS             ; Clear E bits 
+  sta PORT A 
+  
+  lda #"l"
+  sta PORT B
+  lda #RS             ; Set RS; Clear RW/E bits 
+  sta PORT A 
+  lda #(RS | E)       ; Set E bit to send instruction 
+  sta PORT A 
+  lda #RS             ; Clear E bits 
+  sta PORT A 
+  
+  lda #"l"
+  sta PORT B
+  lda #RS             ; Set RS; Clear RW/E bits 
+  sta PORT A 
+  lda #(RS | E)       ; Set E bit to send instruction 
+  sta PORT A 
+  lda #RS             ; Clear E bits 
+  sta PORT A 
+  
+  lda #"o"
+  sta PORT B
+  lda #RS             ; Set RS; Clear RW/E bits 
+  sta PORT A 
+  lda #(RS | E)       ; Set E bit to send instruction 
+  sta PORT A 
+  lda #RS             ; Clear E bits 
+  sta PORT A 
+  
+loop:
+  jump loop     ($8005) 
 
+  .org $fffc
+  .word reset   ($8000)
+  .word $0000
 
-# 
-RAM 
-Install RAM for "Stack" function (Assembly language) 
-# 
-Capacitor 
-It is used to control the Stability of "Voltage" & "Current Flow"
-# 
-Oscillator 
-It is used to control Speed "Megahertz" related to Busy flag
-
-  Bus Timing (Transfer Bus)
-Processor <===> ROM <===> RAM
-       ROM High A15
-      RAM Low A0-A14
-Timing for Processor to read or write Data (Input & Output)
 
 
