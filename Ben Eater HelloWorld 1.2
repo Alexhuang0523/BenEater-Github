@@ -17,7 +17,8 @@ CE(Active low) will activate the EEPROM and output Data even Processor reads upp
 Due to the design of chip we use Inverter/AND Gate to activate the enable signal 
 
 EEPROM <===> Processor  
-#1 Programming EEPROM    
+#  1   
+Programming EEPROM    
 Now Processor is reading low A0-A14 Addressline 
 Adjust the starting location of executing instruction becomes ea ===> 8,000 (Dataline)
 read by Processor 
@@ -46,7 +47,8 @@ Example :
 
                 Programme value 55 aa
 Adapter(Latch) <===> AND Gate <===> Processor 
-#2   CS1 CS2
+# 2   
+CS1 CS2
 For Adapter to find "Addressline 6000" connecting Processor Addressline to 
 Adapter CS1(Active high) CS2(Active low) signal with two AND Gates when
 signal are enabled Adapter will pay attention to the data bus "W 42"
@@ -59,7 +61,8 @@ A13 1 =====> 1 CS1
 Binary 0110 0000 0000 0000  
 Hexidecimal 6000 
 
-#3    Register Pin  
+# 3    
+Register Pin  
 *Memory Map of Internal Register*
 A15 A14 A13 <===> CS2 CS1     6000 = Output Register 
 A3 ====> RS3
