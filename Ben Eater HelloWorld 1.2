@@ -45,13 +45,15 @@ we can latch value of 42 into a Register or any Hardware
 Example :
 6000 W 42
 
-                Programme value 55 aa
+          Programme value 55 aa
 Adapter(Latch) <===> AND Gate <===> Processor 
 # 2   
 CS1 CS2
-For Adapter to find "Addressline 6000" connecting Processor Addressline to 
-Adapter CS1(Active high) CS2(Active low) signal with two AND Gates when
-signal are enabled Adapter will pay attention to the data bus "W 42"
+For Adapter to find "Addressline 6000" outputted by Processor
+connecting Processor Addressline to Adapter CS1(Active high) CS2(Active low) signal 
+with two AND Gates whensignal are enabled Adapter will pay attention to the data bus 
+"W 42"
+
 A15 0 ===\ 
         ===> 0 CS2     
 A14 1 ===/   
