@@ -1,7 +1,38 @@
         Processor <===> RAM
 RAM provides Processor space to stack 
-            0000-3FFF
+        Total 16 Addressline
 0000
 1000    
 2000    
 3000 
+...
+...
+...
+D000
+E000
+F000
+   We only use 0000-3FFF for stack 
+
+Tie A15(0) to CS Chip Select 
+Tie A14(0) to OE Output Enable 
+last two bit 00
+
+    Binary Address     Hexidecimal Address
+0000 0000 0000 0000         0000
+0011 1111 1111 1111         3FFF
+
+          *Timing Waveform* 
+Second
+Ninosecond
+
+Ensuring A15 "Chip Select" is "Low" when "Clock pulse" is "High"
+Using two Invert AND Gates(NAND) 
+
+A15(0) ===> Invert AND Gate (1) ===\ 
+                                    ====> Invert AND Gate(0) ===> Chip Select(0)
+          Clock Signal(1) =========/             
+          
+          
+
+
+
