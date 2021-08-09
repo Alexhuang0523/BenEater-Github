@@ -1,4 +1,4 @@
-ROM (EEPROM AT28C256) 
+                    ROM (EEPROM AT28C256) 
 Program with some different "Instructions" using different "Addresses" 
 instead of using Resistors 
 
@@ -7,16 +7,7 @@ Processor x16 Addressline + EEPROM x15 Addressline + NAND Gate + Adapter(Latch)
 When the Processor reads all Addressline A0-A15, it will see the contents 
 of the EEPROM as repeated twice A0-A14, A15
 
-Connect "Processor A15 line" to the "Chip Enable Signal of EEPROM" with "AND Gate" 
-As Processor reads Lower space (A15=low/0) (Chip Enable=0)
-EEPROM will output Data (D0-D7) 
-As Processor reads Upper space (A15=high/1) (Chip Enable=1)
-EEPROM will not output Data (D0-D7)
-As Processor reads Upper space (A15=high/1) + Inverter/AND Gate ===> (Enable Chip=low/0)  
-CE(Active low) will activate the EEPROM and output Data even Processor reads upper space 
-Due to the design of chip we use Inverter/AND Gate to activate the enable signal 
-
-EEPROM <===> Processor  
+                   EEPROM <===> Processor  
 # 1   
 Programming EEPROM    
 Now Processor is reading low A0-A14 Addressline 
@@ -45,8 +36,8 @@ we can latch value of 42 into a Register or any Hardware
 Example :
 6000 W 42
 
-          Programme value 55 aa
-Adapter(Latch) <===> AND Gate <===> Processor 
+                         Programme value 55 aa
+              Adapter(Latch) <===> AND Gate <===> Processor 
 # 2   
 CS1 CS2
 Now we need an Adapter to capture Output of Processor "Addressline 6000" 
@@ -60,19 +51,19 @@ A14 1 ===/
 A13 1 =====> 1 CS1
 
       Addressline
-Binary 0110 0000 0000 0000  
-Hexidecimal 6000 
+Binary 0110 0000 0000 0000  Hexidecimal 6000 
 
 # 3    
-Register Pin  
-*Memory Map of Internal Register*
+                              Register Pin  
+                    *Memory Map of Internal Register*
+                    
 A15 A14 A13 <===> CS2 CS1     6000 = Output Register 
 A3 ====> RS3
 A2 ====> RS2
 A1 ====> RS1                  6002 = Data Direction Register B
 A0 ====> RS0                  6001 
 
-*ORB, IRB Operation for Register* 
+                    *ORB, IRB Operation for Register* 
 0xff = 1111 1111 
        8 Pins to be Output tie to LED  
 
