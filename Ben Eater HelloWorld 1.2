@@ -7,6 +7,16 @@ Processor x16 Addressline + EEPROM x15 Addressline + AND Gate + Adapter(Latch)
 When the Processor reads all Addressline A0-A15, it will see the contents 
 of the EEPROM as repeated twice A0-A14, A15
 
+                FFFC FFFD Upper Half  
+   Binary Address        Hexidecimal Address    Dataline
+1000 0000 0000 0000             8000             32768
+1000 0000 0000 0001             8001             32769
+1000 0000 0000 0010             8002             32770
+first bit 0
+
+A15(1) ===> AND Gate ===> CE(0) 
+Chip Enable(Active Low) EEPROM will output data 
+
                    EEPROM <===> Processor  
 # 1   
 Programming EEPROM    
