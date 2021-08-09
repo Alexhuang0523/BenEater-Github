@@ -20,7 +20,8 @@ ea ea ea ea ea ea ea ea ea ea ea ea 00 80 ea ea
 fffc  00
 fffd  80
 
-*Operation, Operation Codes and Status Register*
+          *Operation, Operation Codes and Status Register*
+          
 a9 = load particular immediate value to Register A 
 8d = store particular immediate value at particular address 
 4c = jumping 
@@ -41,17 +42,17 @@ Example :
 # 2   
 CS1 CS2
 Now we need an Adapter to capture Output of Processor "Addressline 6000" 
-Connecting Processor Addressline to Adapter CS1(Active high) CS2(Active low) signal 
-with two AND Gates whensignal are enabled Adapter will pay attention to the data bus 
+Connecting Processor Addressline to Adapter CS1(Active High) CS2(Active Low) signal 
+with two AND Gates when signal are enabled Adapter will pay attention to the data bus 
 "W 42"
 
-A15 0 ===\ 
-        ===> 0 CS2     
-A14 1 ===/   
-A13 1 =====> 1 CS1
+A15 (0) ===\ 
+            AND Gate (0 )===> CS2 (0)     
+A14 (1) ===/   
+A13 (1) ====================> CS1 (1)
 
-      Addressline
-Binary 0110 0000 0000 0000  Hexidecimal 6000 
+   Binary Address     Hexidecimal Address
+0110 0000 0000 0000            6000 
 
 # 3    
                               Register Pin  
