@@ -1,5 +1,4 @@
-1.1
-Microprocessor + Clock Circuit + Arduino Mega 
+                  Microprocessor + Clock Circuit + Arduino Mega 
 
 Today we learn how to capture "Data" from a Microprocessor W65C025
 
@@ -27,18 +26,19 @@ light off = 0
 Tieing "LED light" to "A0-A15" Dataline and to "Ground"/Negative throgh "Resistors" 
 LED Light + A0-A15 + Resistors ===> Ground
 
-Programming in Arduino Mega :
-//16 Addressline pin numbers from "Arduino Mega digital I/O pins"
+                          Programming in Arduino Mega 
+                  
+      16 Addressline pin numbers from "Arduino Mega digital I/O pins"
 const char ADDR[] = {22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52} 
 
-//8 Dataline pin numbers from "Arduino Mega digital I/O pins"
+      8 Dataline pin numbers from "Arduino Mega digital I/O pins"
 const char DATA[] = {39, 41, 43, 45, 47, 49, 51, 53} 
 
-//We "compute and print" the "Data" in the form of "Hexidecimal" instaed of "Binary"
+      We "compute and print" the "Data" in the form of "Hexidecimal" instaed of "Binary"
 Program : %04x   %c   %02x 
-No negative figues 
+                        No negative figues 
 Program : unsigned int address = 0;
-Computing means an act or process of calculating an answer by using machine 
+          Computing means an act or process of calculating an answer by using machine 
 Program : address = (address << 1) + bit;  
 Bit comes from code : int bit = digitalRead(ADDR[n])?1:0
 % means Binary 
@@ -59,43 +59,22 @@ Now the "Default value" of Dataline becomes 11101010 (Same Addressline)
 1: Tie to 5 Volt
 0 : Tie to Ground 
 
-"OP Code Matrix Table" describes Instructions 
-ea means no operations (No Instruction)
-"Addressing Mode Table" describes 2 clock cycles 
+                  "OP Code Matrix Table" 
+Describes Instructions ea means no operations (No Instruction)
 
+                  "Addressing Mode Table" 
+Describes 2 clock cycles 
 Reset(RESB) describes the starting location where Mircoprocessor reads 
 FFFC FFFD ea 
 
-Addressline(B)    Dataline(B)   Addressline(Hx)   R/E   Dataline(Hx)
+ Addressline(B)  Dataline(B)   Addressline(Hx)   R/E   Dataline(Hx)
 1111111111111100  11101010         fffc            r       ea 
 1111111111111101  11101010         fffd            r       ea 
 
-Conclusion of Part 1 :
+                       Conclusion of Part 1 
 Microprocessor is now initializing, it is trying to execute instructions,
 but now we are not feeding it instructions, it is hardwiring the no op 
 instruction
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
