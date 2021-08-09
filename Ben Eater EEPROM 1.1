@@ -1,4 +1,4 @@
-EEPROM
+                              EEPROM
 Addressline ===> Switch ===> Resistor ===> Ground 
 Dataline(D0-D7) ===> LED ===> Resistor ===> Ground
 
@@ -10,5 +10,27 @@ Write Enable (Programming) ===> RC Circuit
                             
 Output Enable ===> Low/Ground, Datalines become Output 
                    High/5 Volts, Datalines become Input 
+                   
+                   
+      Processor x16 Addressline <=====> EEPROM x15 Addressline       
+
+                      FFFC FFFD Upper Half  
+   Binary Address        Hexidecimal Address    Dataline
+1000 0000 0000 0000             8000             32768
+1000 0000 0000 0001             8001             32769
+1000 0000 0000 0010             8002             32770
+first bit 0
+
+A15(1) ===> AND Gate ===> CS(0) 
+Chip Select(Active Low) EEPROM will output data 
+
+ 
+
+
+
+      
+
+
+
 
 
