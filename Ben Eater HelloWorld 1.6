@@ -23,7 +23,7 @@ last two bit 00
 
           *Timing Waveform* 
 Second
-Ninosecond
+Ninosecond 
 
 We ensure A15 "Chip Select" is "Low" when "Clock pulse" is "High" by
 using two Invert AND Gates(NAND) 
@@ -34,7 +34,7 @@ A15(0) ===> Invert AND Gate (1) ===\
                                     ====> Invert AND Gate(0) ===> Chip Select(0)
           Clock Signal(1) =========/             
           
-          
+The Bus wil read "garbage" which means no data in some moment        
 
 
 
