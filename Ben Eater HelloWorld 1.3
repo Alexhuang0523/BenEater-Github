@@ -19,16 +19,16 @@ Command on CMD
   
 # 2  
 Packaging Machine code ===> Assembly language : 
-  .org $8000
+  .org $8000   (0)
 reset :
-  lda #$ff    
+  lda #$ff     
   sta $6002
   lda #$55    
   sta $6000
 loop:
   ror           (Instruction) Shifting pattern to right and rotating   
   sta $6000
-  jump loop     ($8005) 
+  jump loop      
 
   .org $fffc
   .word reset   ($8000)
