@@ -1,29 +1,22 @@
                               EEPROM
-Addressline ===> Switch ===> Resistor ===> Ground 
+Addressline ===> Push Button Switch ===> Resistor ===> Ground 
 Dataline(D0-D7) ===> LED ===> Resistor ===> Ground
 
 Chip Enable ===> Ground/Low ~ Enabled  
 Write Enable (Programming) ===> RC Circuit  
-*AC Write Waveforms* 100~1000   5 Volts ===> Switch Button ===> Capacitor 
+*AC Write Waveforms* 100~1000   5 Volts ===> Push Button Switch ===> Capacitor 
                                 ===> Resistor ===> Ground 
                                 Capacitor and Resistor used to control Timing 
                             
 Output Enable ===> Low/Ground, Datalines become Output 
                    High/5 Volts, Datalines become Input 
                    
+Active High ~ Default High 
+Active Low ~ Default Low 
+
+
                    
-      Processor x16 Addressline <=====> EEPROM x15 Addressline       
-
-                      FFFC FFFD Upper Half  
-   Binary Address        Hexidecimal Address    Dataline
-1000 0000 0000 0000             8000             32768
-1000 0000 0000 0001             8001             32769
-1000 0000 0000 0010             8002             32770
-first bit 0
-
-A15(1) ===> AND Gate ===> CE(0) 
-Chip Enable(Active Low) EEPROM will output data 
-
+      
  
 
 
