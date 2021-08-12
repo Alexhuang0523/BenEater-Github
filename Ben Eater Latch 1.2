@@ -23,20 +23,21 @@ The different speed of these two Inputs make a Pulse, Clock Signal
 0 ===> 1 ===> 0
 
                     SR Flip-flop 
-R   S  Clock     Q  -Q
+S   R  Clock     Q  -Q
 0   0    1     Last State
 1   0    1       0   1
 0   1    1       1   0
 1   1    1       0   0
 x   x    x     Last State
+S(Down) R(Up) 
 
                     JK Flip-flop (N)
-K   J  Clock     Q  -Q
+J   K  Clock     Q  -Q
 0   0    1     Last State
 0   1    1       0   1
 1   0    1       1   0
 1   1    1       Toggle
 x   x    x     Last State 
-
+J(Down) K(Up) 
 
 
