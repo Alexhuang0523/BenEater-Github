@@ -1,19 +1,42 @@
-RAM 
+                                              RAM                   
 Static RAM (Register/Latch)
-Data stores for forever unless switch is off 
+  Data stores for forever unless switch is off 
 Dynamic RAM (RAM)
-Data stores for a short time(Capacitor/Charge and Discharge + Resistor) 
-keep Refreshing Writing and Reading
+  Data stores for a short time(Capacitor/Charge and Discharge + Resistor) 
+  keep Refreshing Writing and Reading
 
-RAM + Inverter + Tri-State Buffer 
-Some Output are inverted (unique design) for example RAM
+                              RAM + Inverter(LED) + Tri-State Buffer(LED)
+Some Output are inverted (Unique design) for example RAM
 therefore we need Inverter to re-invert the Output 
 
-Address Decode Logic 
+                              Address Decode Logic (Dip Swithes)                  
 It represents which Row/Byte is used 
               
 Address 0 0 0 0  activates ROW 0
 Address 1 0 0 0  activates ROW 1
+
+#  1 
+Addressline
+                                                      (Running Mode)
+ Push Button Switch + 1 Selector + Dip Switches + Register(D Latch)   
+                               (Programming Mode) 
+ 
+ Dataline
+ 
+                                                / Bus (Running Mode)
+ Push Button Switch + Dip Switches + 2 Selectors + NAND Gate + Edge Detector ===> Clock Signal 
+                                                \ Dip Switches (Programming Mode)
+ 
+ 
+ 
+ 
+  
+  
+  
+
+
+
+
 
 
 
