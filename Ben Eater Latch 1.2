@@ -1,12 +1,5 @@
                     D Flip-flop
 Common way of storing Data in Digital Logic Circuit 
-S   R  Clock     Q  -Q
-0   0    1     Last State
-1   0    1       0   1
-0   1    1       1   0
-1   1    1       0   0
-x   x    x     Last State 
-
 
 Flip-flop means Output only change when there is a Pulse 
 0 ===> 1 ===> 0
@@ -28,6 +21,14 @@ Input ===> AND Gate   >   Input ===> Inverter ===> AND Gate
 When these two Input change from 0 to 1
 The different speed of these two Inputs make a Pulse, Clock Signal 
 0 ===> 1 ===> 0
+
+                    SR Flip-flop 
+S   R  Clock     Q  -Q
+0   0    1     Last State
+1   0    1       0   1
+0   1    1       1   0
+1   1    1       0   0
+x   x    x     Last State
 
                     JK Flip-flop (N)
 J   K  Clock     Q  -Q
