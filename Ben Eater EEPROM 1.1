@@ -22,6 +22,11 @@ Active Low ~ Default Low
               Arduino <======> EEPROM 
 We programme using Arduino(for programming more than few bytes) 
 
+Arduino (12 Data Pins) control EEPROM (11 Address Pins + 8 Data Pins + WE + OE + CE)
+Now the problem is we only 12 Data Pins on Arduino 
+How Arduino with 12 Pins control 21 Pins ?
+Solution : Swith Register 
+
 Switch Register + Store Register + Tri-State Buffer    
 (fews D Flip-flop)
                    
