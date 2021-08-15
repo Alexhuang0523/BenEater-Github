@@ -1,5 +1,7 @@
         Processor <===> RAM
 RAM provides Processor space to stack 
+        *Stack Instruction*
+        
         Total 16 Addressline
 0000
 1000    
@@ -22,19 +24,33 @@ last two bit 00
 0011 1111 1111 1111         3FFF
 
           *Timing Waveform* 
+          *Timing Waveform* 
+         *AC Characteristics* 
+             *Read Cycle* 
+             
 Second
 Ninosecond 
 
-We ensure A15 "Chip Select" is "Low" when "Clock pulse" is "High" by
-using two AND Gates
+We ensure A15 "Chip Select" is "Low" when "Clock Pulse" is "High" by
+using two NAND Gates
 By the way we also need to consider whether the two logic gates
 we just add will have any effect on the Timing 
 
-A15(0) ===> AND Gate(1) ===========\ 
-                                     AND Gate(0) ===> Chip Select(0)
-            Clock Signal(1) =======/             
+A15(0) ===> NAND Gate(1) ===========\ 
+                                      NAND Gate(0) ===> Chip Select(0)
+            Clock Signal(1) ========/             
           
-The Bus wil read "garbage" which means no data in some moment        
+The Bus wil read "Garbage" which means no data in some moment 
+
+
+
+
+
+
+
+
+
+
 
 
 
