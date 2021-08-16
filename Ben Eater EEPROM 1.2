@@ -1,1 +1,65 @@
+                                              Programming 
+                                  *Arduino Reference* Function Guidelines 
+Using 3 Pins(Arduino) to control 21 Pins(EEPROM) 
+#define SHIFT_DATA 2
+#define SHIFT_CLK 3
+#define SHIFT_LATCH 4
+
+
+
+
+
+void setup() {
+  // Setup code, run once 
+  printMode(SHIFT_DATA, OUTPUT);
+  printMode(SHIFT_CLK, OUTPUT);                                  
+  printMode(SHIFT_LATCH, OUTPUT);
+  
+  // Double shiftOut due to 2 Switch Register 
+  shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, 0x55);
+  shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, 0x00);
+  
+  //Activating Store Register by creating a Clock Pulse 
+  digitalWrite(SHIFT_LATCH, LOW);
+  digitalWrite(SHIFT_LATCH, HIGH);
+  digitalWrite(SHIFT_LATCH, LOW);
+  
+ }
+
+void 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
