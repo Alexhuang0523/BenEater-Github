@@ -33,30 +33,7 @@ Switch Register(D Flip-flop) + 2 Store Register + Tri-State Buffer
                                    Decide whether data should be
                                    outputted (Set pin 12 "High" to output)
                                    
-                        Programming 
-                    *Arduino Reference*
-#define SHIFT_DATA 2
-#define SHIFT_CLK 3
-#define SHIFT_LATCH 4
-
-void setup() {
-  // Setup code, run once
-  pinMode(SHIFT_DATA, OUTPUT);
-  pinMode(SHIFT_CLK, OUTPUT);
-  pinMode(SHIFT_LATCH, OUTPUT);
-  
-  shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, 0x55); // Key-in double because of 2 Chips
-  shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, 0x00);   
-  
-  digitalWrite(SHIFT_LATCH, LOW);   // Activate Store Register 
-  digitalWrite(SHIFT_LATCH, HIGH);
-  digitalWrite(SHIFT_LATCH, LOW);
-  
-}  
-
-void loop() {
-  // Main code, run repeatedly
-  
+                      
 
       
 
