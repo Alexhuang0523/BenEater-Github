@@ -5,9 +5,14 @@ Using 3 Pins(Arduino) to control 21 Pins(EEPROM)
 #define SHIFT_CLK 3
 #define SHIFT_LATCH 4
 
-
-
-
+void setAddress(int address, bool outputEnable) {                                first bit set     
+ // Switch 8 bits to right, remain 3 bits  e.g. 1234 ===> 100 1101 0010              |
+ shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, (address >> 8) | (outputEnable ? 0x00 : 0x80));
+ shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, address); 
+ 
+ digitalWrite(SHIFT_LATCH, LOW);
+ digitalWrite(SHIFT_LATCH, HIGH);
+ digitalWrite(SHIFT_LATCH, LOW);
 
 void setup() {
   // Setup code, run once 
@@ -15,6 +20,8 @@ void setup() {
   printMode(SHIFT_CLK, OUTPUT);                                  
   printMode(SHIFT_LATCH, OUTPUT);
   
+  setAddress(1234, false);  // False == Active Low 
+                         
   // Double shiftOut due to 2 Switch Register 
   shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, 0x55);
   shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, 0x00);
