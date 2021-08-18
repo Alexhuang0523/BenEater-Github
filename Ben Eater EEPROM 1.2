@@ -82,7 +82,12 @@ void setup() {
   pinMode(WRITE_EN, OUTPUT);
   Serial.begin(57600);                                        // Serial(Monitor Screen) Port 
   
-  writeEEPROM(0, 42);
+  for (int address = 0; address <= 2047; address +=1)         // Erase entire EEPROM
+    writeEEPROM(address, 0xff);
+  }
+  for (int address = 0; address <= 2047; address +=1)         // Programme 16 bytes 
+    writeEEPROM(address, data[address]);
+  }
   printContents();
   
   *Testing 1*         
