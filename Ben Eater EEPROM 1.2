@@ -8,6 +8,7 @@ Using 3 Pins(Arduino) to control 21 Pins(EEPROM)
 #define EEPROM_D7 12
 
 void setAddress(int address, bool outputEnable) {                                first bit set     
+ // shiftOut == Function from Arduino Reference                                      |
  // Switch 8 bits to right, remain 3 bits  e.g. 1234 ===> 100 1101 0010              |
  shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, (address >> 8) | (outputEnable ? 0x00 : 0x80));
  shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, address); 
@@ -35,16 +36,15 @@ void setup() {
   *Testing*
   setAddress(1234, false /*Active Low*/);  // Switch Register with LED 
   
-  Serial.begin(57600);  // Serial = Port 
-  
+  Serial.begin(57600);  // Serial(Monitor Screen) Port 
   *Testing*
-  Serial.println(readEEPROM(0) /*read data in position 0*/);  // Read data from Serial not from Pin 
-  
-  for (int base = 0; base <= 255; base += 16) {
-    byte data[16];
-    for (int offset = 0; offset <= 15; offset += 1) {
-      data[offset] = readEEPROM(base + offset);
-    }
+  Serial.println(readEEPROM(0) /*read data at address 0*/);  // Read data from Serial port not from Pin
+                                                                 
+  for (int base = 0; base <= 255; base += 16) {     ===================================================> 000:
+    byte data[16];                                           //Physical Address + Offset address         010:
+    for (int offset /*offset address*/ = 0; offset <= 15; offset += 1) {                                 020:
+      data[offset] = readEEPROM(base + offset);                                                          030:
+    }  
     
     char buf[80];
     sprintf(buf, "%03x: %02x %02x %02x %02x %02x %02x %02x %02x  %02x %02x %02x %02x %02x %02x %02x %02x",
@@ -55,7 +55,7 @@ void setup() {
     
     }
 } 
-                  
+          
   // Double shiftOut due to 2 Switch Register 
   shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, 0x55);
   shiftOut(SHIFT_DATA, SHIFT_CLK, MSBFIRST, 0x00);
