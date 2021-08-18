@@ -21,6 +21,7 @@ void setAddress(int address, bool outputEnable) {                               
  digitalWrite(SHIFT_LATCH, LOW);
 }
 
+
 byte readEEPROM(int address) {
   for (int pin = EEPROM_D0; pin <= EEPROM_D7; pin +=1 ) {
     pinMode(pin, INPUT);
@@ -33,6 +34,7 @@ byte readEEPROM(int address) {
   }
   return data;
 }
+
 
 void writeEEPROM(int address, byte data) {
   for (int pin = EEPROM_D0; pin <= EEPROM_D7; pin +=1 ) {
@@ -49,6 +51,7 @@ void writeEEPROM(int address, byte data) {
   digitalWrite(WRITE_EN, HIGH);
   delay(5);
 }
+
 
 void printContents() {
   for (int base = 0; base <= 255; base += 16) {     ===================================================> 000:
@@ -74,24 +77,17 @@ void setup() {
   printMode(SHIFT_LATCH, OUTPUT);
   digitalWrite(WRITE_EN, HIGH);
   pinMode(WRITE_EN, OUTPUT);
-  Serial.begin(57600);  // Serial(Monitor Screen) Port 
+  Serial.begin(57600);                                         // Serial(Monitor Screen) Port 
   
   writeEEPROM(0, 42);
   printContents();
   
   *Testing 1*         
-  setAddress(1234, false /*Active Low*/);  // Switch Register with LED 
+  setAddress(1234, false /*Active Low*/);                     // Switch Register output to LED 
   *Testing 2*
-  Serial.println(readEEPROM(0) /*read data at address 0*/);  // Read data from Serial port not from Pin
+  Serial.println(readEEPROM(0) /*read data at address 0*/);   // Read data from Serial port not from Pin
   
  }
-
-
-
-
-
-
-
 
 
 
