@@ -3,12 +3,6 @@
                        
                         Curcuit
         Capacitor + Resistor + 555 Timer + LED
-        
-                   Waveforms(Formula)
-Capacitor (1 Micro-Farad 50 Volts)
-Resistor  (1k Ohms)
-Variable Resistor (Change Speed)
-  If the LED is flashing TOO FAST, it looks like TURN ON as normal 
     
                Wires act as an Inductor(Impedance)
 As we run Current through the wire we will get a Magnetic feild that is
@@ -17,6 +11,20 @@ going to resist changes to the Current that flows through the wire
   Orange Line   = Output & Input 
  (0 to 5 Volts)
   Blue Line     = Capacitor Charge
+Capacitor (1 Micro-Farad 50 Volts)
+Resistor  (1k Ohms)
+Variable Resistor (Change Speed)
+  If the LED is flashing TOO FAST, it looks like TURN ON as normal 
+
+    Discharge Time 
+T = t1 + t2
+  = 0.693 (Ra + 2Rb) C
+                      \ 
+                   Capacitor 
+  = 0.693 (1k + 2*100k) 0.000001   
+  = 0.139293 milliseconds 
+Period of the LED flashing 
+
   
   
  
