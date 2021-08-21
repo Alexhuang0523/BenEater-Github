@@ -4,10 +4,6 @@
                         Curcuit
         Capacitor + Resistor + 555 Timer + LED
     
-              Wires act as an Inductor(Impedance)
-As we run Current through the wire we will get a Magnetic feild that is
-going to resist changes to the Current that flows through the wire
-
                       Ohm's Law 
                           V
                         I   R 
@@ -26,14 +22,22 @@ going to resist changes to the Current that flows through the wire
   Variable Resistor (Change Speed)
     If the LED is flashing TOO FAST, it looks like being TURN ON as normal 
   
-          Calculation for Discharge Time 
-T = t1 + t2
-  = 0.693 (Ra + 2Rb) C
+                Calculation for Discharge Time 
+  T = t1 + t2
+   = 0.693 (Ra + 2Rb) C
                       \ 
                    Capacitor 
-  = 0.693 (1k + 2*100k) 0.000002    
-  = 0.278586 milliseconds 
-                Period of the LED flashing 
+   = 0.693 (1k + 2*100k) 0.000002    
+   = 0.278586 milliseconds 
+                  \
+       Period of the LED flashing  
+       
+1 Second LED flashes 1/0.278586 milliseconds = 3.6 times 
+
+              Wires act as an Inductor(Impedance)
+As we run Current through the wire we will get a Magnetic feild that is
+going to resist changes to the Current that flows through the wire
+
 
 
   
