@@ -1,28 +1,26 @@
                        555 Timer
-          Transistor + Comparator + SR Latch   
+          Transistors + Comparators + SR Latch   
                        
                         Curcuit
-        Capacitor + Resistor + 555 Timer + LED
+        Capacitors + Resistors + 555 Timer + LED
     
                       Ohm's Law 
                           V
                         I   R 
         V = Voltage   I = Current   R = Resistance    
 
-       Comparison between Ouput(from Chip) and Capacitor 
-       
-  Orange Line   = LED Output
-  Blue Line     = Capacitor Charge/Discharge
-                               Total 5 volts divided into 3 Segments 
+
+       Comparison between Ouput(from Chip) and Capacitor   
+ Orange Line   = LED Output
+ Blue Line     = Capacitor Charge/Discharge
+                               Total 5 volts divide into 3 Segments 
                   Discharge  volts above/equal 3.33 volts
                   Charge     volts below/equal 1.67 volts
                   Resistor's Ohms smaller Capacitors Charge/Discharge faster 
-
-  Capacitor           (1 Micro-Farad 50 Volts)
-  Resistor A          (1k Ohms)
-  Resistor B          (100k Ohms)
-  Variable Resistor   (Change Speed)
-    If the LED is flashing TOO FAST, it looks like being TURN ON as normal 
+  Capacitor      (1 Micro-Farad 50 Volts)
+  Resistor A     (1k Ohms)
+  Resistor B     (100k Ohms)
+  
   
                 Calculation for Discharge Time 
   T = t1 + t2
@@ -33,25 +31,31 @@
    = 0.278586 milliseconds 
                   \
        Period of the LED flashing  
-       
 1 second LED flashes 1/0.278586 milliseconds = 3.6 times 
 
-                        Power Supply 
-                            Noise 
-Output TURN ON   0 volt to 5 volts (lots of junk up down up down)  
-Solution : Put Capacitor at Chip Pin 5     
 
-                           Impedance 
-                    Wire acts as an Inductor 
+                        Power Supply 
+#    1                     Noise 
+Output TURN ON   0 volt to 5 volts (lots of junk up down up down)  
+Solution : Put 0.01 mirco Capacitor at Chip Pin 5     
+
+#    2                   Impedance 
+                   Wire acts as an Inductor 
 As we run Current through the wire we will get a Magnetic feild that is
 going to resist changes to the Current that flows through the wire
 
 Output TURN ON   0 volt to 5 volts (within Transistors)
                  supply more than 5 volts to LED (Overshooting)
-Solution : Put Capacitor to smooth Current Transactions
+Solution : Put 0.1 micro Capacitor near Power supply to smooth 
+           Current Transactions
+
+#    3                     Speed
+                        LED flashing 
+As the LED is flashing TOO FAST, it looks like being TURN ON as normal 
+Solution : Tie a Variable Resistor to Resistor A & Resistor B  
 
 
   
-  
- 
-
+   
+   
+   
