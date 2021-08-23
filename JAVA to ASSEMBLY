@@ -8,12 +8,15 @@ JAVA Source Code
                Run in JVM    CPU
 
 HEAP  
-  Memory area of JVM
+   Memory area of JVM
 JIT & AOT 
-  Place where transfer High-level language to Low-level language
-
-                    
-                    
+ | Place where transfer High-level language to Low-level language
+ |
+ Inlining 
+    Same Target Type (Run target code directly)
+    Not Same Target Type (Run target method as a call)
+ Optimization 
+    Doing least amount of work to accomplish goal                   
                     
                     
                     
