@@ -1,9 +1,17 @@
               JAVA ========> AASEMBLY 
 
-JAVA Source Code ===> ByteCode ===> Native code ===> Machine Code         
-                          |               |
-                    Run in JVM           CPU
-                    
+JAVA Source Code 
+                ByteCode 
+                   |    Native code 
+                   |          |    Machine Code         
+                   |          |
+               Run in JVM    CPU
+
+HEAP  
+  Memory area of JVM
+JIT & AOT 
+  Place where transfer High-level language to Low-level language
+
                     
                     
                     
