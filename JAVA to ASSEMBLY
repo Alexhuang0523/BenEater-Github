@@ -1,0 +1,14 @@
+              JAVA ========> AASEMBLY 
+
+JAVA Source Code ===> ByteCode ===> Native code ===> Machine Code         
+                          |               |
+                    Run in JVM           CPU
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
