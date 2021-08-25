@@ -26,7 +26,7 @@
 
                           Rounter 
                           /     \
-                        WAN     LAN (WIFI) ---> Switch
+              (GATEWAY) WAN     LAN (WIFI) ---> Switch
                         
   Intranet ---> Computer Networking 
   Internet ---> Gateway 
