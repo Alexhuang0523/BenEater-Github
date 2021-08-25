@@ -14,9 +14,16 @@ Application Layer
       Network Port --------> Network Interface Card (MAC Address) 
     Physical Address
           |
+      Data Packet     
           |----> Network Cable 
+      Data Packet    
           |
-      Data Packet (MAC Address)
+      Data Packet (Source MAC Address + Target MAC Address)
           |
+      Data Packet     
           |
       Calculator 
+
+
+
+
