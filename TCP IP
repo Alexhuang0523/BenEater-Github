@@ -17,7 +17,7 @@ Application Layer
       Data Packet     
           |----> Network Cable 
       Data Packet    
-          |
+          |              Sender               Receiver 
       Data Packet (Source MAC Address + Target MAC Address)
           |
       Data Packet     
