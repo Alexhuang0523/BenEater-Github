@@ -2,15 +2,19 @@
                           
 Clock Circuit                              Binary Counter Program   
 
-Memory Register (RAM)                      Register A 
-    Address       
-     Data                                     ALU
+Memory Address Register                    Register A 
+        | |  
+Random Access Memory (RAM)                 ALU
 
 Instruction Register                       Register B 
 
                                            8-bit Decimal Display
                                            
                                            Output Register 
+                                           
+                                           Control Logic 
+                                           (Control all the Write/Enable Signal)
+                                           
                                            
                                            
                                            
