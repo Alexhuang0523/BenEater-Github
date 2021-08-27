@@ -1,18 +1,18 @@
-                         Bus Transfer 
+                            Bus Transfer 
                           
-Clock Circuit                              Binary Counter Program   
+Clock Circuit                               Binary Counter Program   
 
-Memory Address Register                    Register A 
-        | |  
-Random Access Memory (RAM)                 ALU
+Memory Address Register                     Register A 
+        | |                                  |
+Random Access Memory (RAM)                  ALU
+                                             |
+Instruction Register                        Register B 
 
-Instruction Register                       Register B 
-
-                                           8-bit Decimal Display
+                                            8-bit Decimal Display
+                                             |
+                                            Output Register 
                                            
-                                           Output Register 
-                                           
-                                           Control Logic 
+                                            Control Logic 
                                                  ||
                                             Clock Ciruit 
                                             Memory Address Register in 
