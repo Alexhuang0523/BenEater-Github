@@ -1,19 +1,52 @@
                     3 EEPROM drive 3 7-Segment Displays (Easy)
                   1 EEPROM drives 3 7-Segment Dsiplays (Complex)  
                                 THREE DIGITS
-                                
-       EEPROM + 3 Common Cathode 
-              (7-Segment Display)                  
-   
+                           
+      555 Timer + EEPROM + Binary Counter Program + Decoder + 3 7-Segment Displays 
+                                                                  Common Anode
+                                                                  Common Cathode
+	                                Programming 
+ Counter 0 = One place    
+ Counter 1 = Ten place      
+ Counter 2 = Hundred place 
+                                123
+ A10  A9  A8      A7  A6  A5  A4  A3  A2  A1  A0     D7  D6  D5  D4  D3  D2  D1  D0
+  0   0   0       0   1   1   1   1   0   1   1      0   1   0   0   1   1   1   1   -----> 3
+  0   0   1       0   1   1   1   1   0   1   1      0   1   0   1   1   0   1   1   -----> 2
+  0   1   0       0   1   1   1   1   0   1   1      0   0   0   0   0   0   1   1   -----> 1
+  0   1   1       0   1   1   1   1   0   1   1      0   0   0   0   0   0   0   0   -----> 0
 
+byte digits[] = { 0x7e, 0x30, 0x6d, 0x79, 0x33, 0x5b, 0x5f, 0x70, 0x7f, 0x7b };
 
-
-
-
-
-
-
-
-
+ for (int value = 0; value <= 255; value +=1) {
+   writeEEPRPOM(value, digits[value % 10]);
+ }
+ for (int value = 0; value <= 255; value +=1) {
+   writeEEPRPOM(value + 256, digits[(value / 10) % 10]);
+ }
+ for (int value = 0; value <= 255; value +=1) {
+   writeEEPRPOM(value + 512, digits[(value / 100) % 10]);
+ }
+ for (int value = 0; value <= 255; value +=1) {
+   writeEEPRPOM(value + 768, 0);
+ }
+ 
+ // Twos Compliment 
+ for (int value = -128; value <= 127; value+=1) {
+   writeEEPRPOM((byte)value + 1024, digits[abs(value) % 10]);
+ }
+  for (int value = -128; value <= 127; value+=1) {
+   writeEEPRPOM((byte)value + 1280, digits[abs(value / 10) % 10]);
+ }
+  for (int value = -128; value <= 127; value+=1) {
+   writeEEPRPOM((byte)value + 1536, digits[abs(value / 100) % 10]);
+ }
+ for (int value = -128; value <= 127; value +=1) {
+   if (value < 0) {
+        writeEEPROM((byte)value + 1792, 0x01);
+   } else {
+        writeEEPROM((byte)value + 1792, 0);
+   }
+}
 
 
