@@ -13,7 +13,23 @@ Instruction Register                       Register B
                                            Output Register 
                                            
                                            Control Logic 
-                                           (Control all the Write/Enable Signal)
+                                                 ||
+                                            Clock Ciruit 
+                                            Memory Address Register in 
+                                            RAM in/out
+                                            Instruction Register in/out
+                                            Register A in/out
+                                            ALU out 
+                                            Substracting
+                                            Register B in
+                                            Output Register in
+                                            Binary Counter Programme in/out
+                                            Jump
+                                            
+                                            
+                                            
+                                     
+                                       
                                            
                                            
                                            
