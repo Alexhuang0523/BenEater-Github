@@ -1,10 +1,41 @@
-                                Control Logic + EEPROM 
+                         Control Logic + EEPROM 
 
 Binary Counter Program                     
 Main Clock Inverted + Counter + Decoder + EEPROM 
                                    |
                                5 LED light 
+                               
+                               
+                   LDA 14         ADD 15        OUT
+             T0   CO    MI       CO    MI     CO    MI
+             -----------------------------------------
+             T1   RO    II       RO    II     RO    II
+                  CE             CE           CE
+             -----------------------------------------
+             T2   IO    MI       IO    MI     AO    OI
+             ----------------------------------------- 
+             T3   RO    AI       RO    BI
+             -----------------------------------------
+             T4                  EO    AI
 
+
+                   Programming these Micro-Instruction into 2 EEPROM 
+                   
+        INSTRUCTION     STEP      HLT MI RI RO IO II AI AO SO SU BI OI CE CO J
+FETCH     x x x x      0 0 0       0  1  0  0  0  0  0  0  0  0  0  0  0  1  0
+          x x x x      0 0 1       0  0  0  1  0  1  0  0  0  0  0  0  1  0  0
+
+LDA       0 0 0 1      0 1 0       0  1  0  0  1  0  0  0  0  0  0  0  0  0  0
+          0 0 0 1      0 1 1       0  0  0  1  0  0  1  0  0  0  0  0  0  0  0
+          0 0 0 1      1 0 0       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+ADD       0 0 1 0      0 1 0       0  1  0  0  1  0  0  0  0  0  0  0  0  0  0
+          0 0 1 0      0 1 1       0  0  0  1  0  0  0  0  0  0  1  0  0  0  0
+          0 0 1 0      1 0 0       0  0  0  0  0  0  1  0  1  0  0  0  0  0  0
+
+OUT       1 1 1 0      0 1 0       0  0  0  0  0  0  0  1  0  0  0  1  0  0  0
+          1 1 1 0      0 1 1       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+          1 1 1 0      1 0 0       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 
 
 
