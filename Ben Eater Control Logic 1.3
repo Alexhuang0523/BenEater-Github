@@ -1,12 +1,41 @@
-                        Programming Mirco-Instruction using Arduino 
+        INSTRUCTION     STEP      HLT MI RI RO IO II AI AO SO SU BI OI CE CO J
+FETCH     x x x x      0 0 0       0  1  0  0  0  0  0  0  0  0  0  0  0  1  0
+          x x x x      0 0 1       0  0  0  1  0  1  0  0  0  0  0  0  1  0  0
 
+LDA       0 0 0 1      0 1 0       0  1  0  0  1  0  0  0  0  0  0  0  0  0  0
+          0 0 0 1      0 1 1       0  0  0  1  0  0  1  0  0  0  0  0  0  0  0
+          0 0 0 1      1 0 0       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+ADD       0 0 1 0      0 1 0       0  1  0  0  1  0  0  0  0  0  0  0  0  0  0
+          0 0 1 0      0 1 1       0  0  0  1  0  0  0  0  0  0  1  0  0  0  0
+          0 0 1 0      1 0 0       0  0  0  0  0  0  1  0  1  0  0  0  0  0  0
+
+OUT       1 1 1 0      0 1 0       0  0  0  0  0  0  0  1  0  0  0  1  0  0  0
+          1 1 1 0      0 1 1       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+          1 1 1 0      1 0 0       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+                       
+                       Programming Mirco-Instruction using Arduino 
+
+#define HLT 0b1000000000000000
 #define MI  0b0100000000000000
+#define RI  0b0010000000000000
+#define RO  0b0001000000000000
+#define IO  0b0000100000000000
+#define II  0b0000010000000000
+#define AI  0b0000001000000000
+#define AO  0b0000000100000000
+#define EO  0b0000000010000000
+#define SU  0b0000000001000000
+#define BI  0b0000000000100000
+#define OI  0b0000000000010000
+#define CE  0b0000000000001000
 #define CO  0b0000000000000100
+#define J   0b0000000000000010
 
 unit16_t data[] = {
-  MI|CO
-
-
+  MI|CO,
+  RO|II|CE,
+};
 
 
 
