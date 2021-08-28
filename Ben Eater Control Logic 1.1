@@ -30,17 +30,19 @@ Binary Counter Program                      Output Register
                                                 Jumper Enable 
  
  
-                       Define any Address yourself 
-                 Instruction      Address      Data 
-                   LDA 14          0000      0001 1110 ---> 14 programming in RAM
-                   ADD 15          0001      0010 1111 ---> 15 programming in RAM
+              Define Location LDA 14 ADD 15 OUT yourself 
+                                             LDA  14
+                                             ADD  15
+                 Instruction     Location    OUT
+                   LDA 14          0000      0001 1110 ---> programming in RAM
+                   ADD 15          0001      0010 1111 ---> programming in RAM
                    OUT             0010      1110 0000
             
-                                   1110      0001 1100 (28)
-                                   1111      0000 1110 (14)
+                                   1110      0001 1100 ---> 28 in Location 14
+                                   1111      0000 1110 ---> 14 in Location 15
                                               
                             Mirco-Instruction 
-                   LDA 14         Add 15        OUT
+                   LDA 14         ADD 15        OUT
              T0   CO    MI       CO    MI     CO    MI
              -----------------------------------------
              T1   RO    II       RO    II     RO    II
@@ -51,4 +53,5 @@ Binary Counter Program                      Output Register
                                  EO    AI
                              (SUM OUT)
                                            
-                                           
+                             
+                             
