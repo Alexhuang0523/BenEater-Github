@@ -6,6 +6,13 @@ Main Clock Inverted + Counter + Decoder + 2 EEPROM
                                5 LED light 
                                
                                
+                                             LDA  14
+                                             ADD  15
+                 Instruction     Location    OUT
+                   LDA 14          0000      0001 1110 ---> programming in RAM
+                   ADD 15          0001      0010 1111 ---> programming in RAM
+                   OUT             0010      1110 0000       
+        
                    LDA 14         ADD 15        OUT
              T0   CO    MI       CO    MI     CO    MI
              -----------------------------------------
