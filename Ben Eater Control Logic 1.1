@@ -11,7 +11,8 @@ Instruction Register                        Register B
                                             8-bit Decimal Display
                                              |
 Binary Counter Program                      Output Register 
- Inverter + Counter + Inverter + Decoder -----  
+Main Clock Inverted + Counter + Inverter + 
+Decoder --------------------------------------
     We want the Control Unit to be changing  |
     the Control Word between Clock Cycles    |
     instead of Same Cycles                   |
@@ -45,7 +46,7 @@ Binary Counter Program                      Output Register
                                    1110      0001 1100 ---> 28 in Location 14
                                    1111      0000 1110 ---> 14 in Location 15
                                               
-                            Mirco-Instruction 
+                            Mirco-Instruction ----> Setting Reset after 5 Steps 
                    LDA 14         ADD 15        OUT
              T0   CO    MI       CO    MI     CO    MI
              -----------------------------------------
@@ -55,7 +56,6 @@ Binary Counter Program                      Output Register
                   IO    MI       IO    MI     AO    OI
                   RO    AI       RO    BI     
                                  EO    AI
-                             (SUM OUT)
-                                           
+                             (SUM OUT)                               
                              
                              
