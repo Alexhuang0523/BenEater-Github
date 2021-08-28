@@ -11,7 +11,11 @@ Instruction Register                        Register B
                                             8-bit Decimal Display
                                              |
 Binary Counter Program                      Output Register 
- Counter + Inverter + Decoder + EEPROM ------|   
+ Inverter + Counter + Inverter + Decoder -----  
+    We want the Control Unit to be changing  |
+    the Control Word between Clock Cycles    |
+    instead of Same Cycles                   |
+                                             |
                                              Control Logic  
                                                 Clock Pulse Enable 
                                                 Memory Address Register In Enable 
