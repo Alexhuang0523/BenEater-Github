@@ -12,11 +12,43 @@ Instruction Register                        Register B
                                              |
 Binary Counter Program                      Output Register 
  Inverter + EEPROM --------------------------|   
-                                            Control Logic 
-
-
-
-                              
-                                                                                  
+                                             Control Logic  
+                                                Clock Pulse Enable 
+                                                Memory Address Register In Enable 
+                                                RAM In Enable 
+                                                RAM Out Enable 
+                                                Instruction Register In Enable 
+                                                Instruction Register Out Enable
+                                                Register A In Enable 
+                                                Register A Out Enable 
+                                                ALU Out Enable
+                                                ALU Substract Enable 
+                                                Register B In Enable 
+                                                Output Register In Enable 
+                                                Binary Counter Program Enable 
+                                                Binary Counter Program Out Enable 
+                                                Jumper Enable 
+ 
+ 
+                       Define any Address yourself 
+                 Instruction      Address      Data 
+                   LDA 14          0000      0001 1110 ---> 14
+                   ADD 15          0001      0010 1111 ---> 15
+                   OUT             0010      1110 0000
+            
+                                   1110      0001 1100 (28)
+                                   1111      0000 1110 (14)
+                                              
+                            Mirco-Instruction 
+                   LDA 14         Add 15        OUT
+             T0   CO    MI       CO    MI     CO    MI
+             -----------------------------------------
+             T1   RO    II       RO    II     RO    II
+                  CE             CE           CE
+             -----------------------------------------
+                  IO    MI       IO    MI     AO    OI
+                  RO    AI       RO    BI     
+                                 EO    AI
+                                 
                                            
                                            
