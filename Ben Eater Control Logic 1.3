@@ -16,6 +16,10 @@ OUT       1 1 1 0      0 1 0       0  0  0  0  0  0  0  1    0  0  0  1  0  0  0
           1 1 1 0      0 1 1       0  0  0  0  0  0  0  0    0  0  0  0  0  0  0
           1 1 1 0      1 0 0       0  0  0  0  0  0  0  0    0  0  0  0  0  0  0
                        
+HLT       1 1 1 1      0 1 0       1  0  0  0  0  0  0  0    0  0  0  0  0  0  0
+          1 1 1 1      0 1 1       0  0  0  0  0  0  0  0    0  0  0  0  0  0  0
+          1 1 1 1      1 0 0       0  0  0  0  0  0  0  0    0  0  0  0  0  0  0
+          
                        Programming Mirco-Instruction using Arduino 
 
 #define HLT 0b1000000000000000
@@ -53,11 +57,20 @@ unit16_t data[] = {
   
 };
 
-//First EEPROM 
-//Program data bytes 
+ 
+//Program data bytes for 2 EEPROM 
 Srial.print("Programming EEPROM")
+//First half of EEPROM (128 bytes) ---> Low 
 for (int address = 0; address < sizeof(data)/sizeof(data[0]); address +=1) {
         writeEEPROM(address, data[address] >> 8);
+ 
+        if (address % 64 == 0) {
+                Serial.print(".");
+        }
+ }
+ //Second half of EEPROM (128 bytes) ---> High  
+ for (int address = 0; address < sizeof(data)/sizeof(data[0]); address +=1) {
+        writeEEPROM(address + 128, data[address]);
  
         if (address % 64 == 0) {
                 Serial.print(".");
@@ -67,5 +80,3 @@ for (int address = 0; address < sizeof(data)/sizeof(data[0]); address +=1) {
  
  
  
-
-        
