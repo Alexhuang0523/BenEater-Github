@@ -26,7 +26,7 @@ Main Clock Inverted + Counter + Decoder + 2 EEPROM
              T4                  EO    AI
 
 
-                   Programming these Micro-Instruction into 2 EEPROM 
+               Programming these Micro-Instruction into 2 EEPROM 
      
                       (T0-T5)    (All the location can be defined by yousrself)
         INSTRUCTION     STEP      HLT MI RI RO IO II AI AO SO SU BI OI CE CO J
@@ -46,4 +46,16 @@ OUT       1 1 1 0      0 1 0       0  0  0  0  0  0  0  1  0  0  0  1  0  0  0
           1 1 1 0      1 0 0       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 
 
+
+                 Assembly Language <=====> Machine Code/Bytecode  
+                   
+                Assembly   Binary Counter  
+                Language   Program (Address)  Instruction   Value 
+               0: LDI 3       0000              0101         0011
+               1: STA 15      0001              0100         1111
+               2: LDI 0       0010              0101         0000
+               3: ADD 15      0011              0010         1111
+               4: OUT         0100              1110         0000
+               5: JMP 3       0101              0110         0011
+  
 
