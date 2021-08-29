@@ -1,18 +1,20 @@
-        INSTRUCTION     STEP      HLT MI RI RO IO II AI AO SO SU BI OI CE CO J
-FETCH     x x x x      0 0 0       0  1  0  0  0  0  0  0  0  0  0  0  0  1  0
-          x x x x      0 0 1       0  0  0  1  0  1  0  0  0  0  0  0  1  0  0
+                                  First EEPROM               Second EEPROM 
+        INSTRUCTION     STEP      HLT MI RI RO IO II AI AO   SO SU BI OI CE CO J
+                                         (40)         (0)
+FETCH     x x x x      0 0 0       0  1  0  0  0  0  0  0    0  0  0  0  0  1  0
+          x x x x      0 0 1       0  0  0  1  0  1  0  0    0  0  0  0  1  0  0
 
-LDA       0 0 0 1      0 1 0       0  1  0  0  1  0  0  0  0  0  0  0  0  0  0
-          0 0 0 1      0 1 1       0  0  0  1  0  0  1  0  0  0  0  0  0  0  0
-          0 0 0 1      1 0 0       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+LDA       0 0 0 1      0 1 0       0  1  0  0  1  0  0  0    0  0  0  0  0  0  0
+          0 0 0 1      0 1 1       0  0  0  1  0  0  1  0    0  0  0  0  0  0  0
+          0 0 0 1      1 0 0       0  0  0  0  0  0  0  0    0  0  0  0  0  0  0
 
-ADD       0 0 1 0      0 1 0       0  1  0  0  1  0  0  0  0  0  0  0  0  0  0
-          0 0 1 0      0 1 1       0  0  0  1  0  0  0  0  0  0  1  0  0  0  0
-          0 0 1 0      1 0 0       0  0  0  0  0  0  1  0  1  0  0  0  0  0  0
+ADD       0 0 1 0      0 1 0       0  1  0  0  1  0  0  0    0  0  0  0  0  0  0
+          0 0 1 0      0 1 1       0  0  0  1  0  0  0  0    0  0  1  0  0  0  0
+          0 0 1 0      1 0 0       0  0  0  0  0  0  1  0    1  0  0  0  0  0  0
 
-OUT       1 1 1 0      0 1 0       0  0  0  0  0  0  0  1  0  0  0  1  0  0  0
-          1 1 1 0      0 1 1       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-          1 1 1 0      1 0 0       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+OUT       1 1 1 0      0 1 0       0  0  0  0  0  0  0  1    0  0  0  1  0  0  0
+          1 1 1 0      0 1 1       0  0  0  0  0  0  0  0    0  0  0  0  0  0  0
+          1 1 1 0      1 0 0       0  0  0  0  0  0  0  0    0  0  0  0  0  0  0
                        
                        Programming Mirco-Instruction using Arduino 
 
@@ -48,10 +50,22 @@ unit16_t data[] = {
   MI|CO, RO|II|CE, 0,     0,     0,     0, 0, 0,         // 1101
   MI|CO, RO|II|CE, AO|OI, 0,     0,     0, 0, 0,         // 1110 - OUT
   MI|CO, RO|II|CE, HLT,   0,     0,     0, 0, 0,         // 1111 - HLT
- 
   
 };
 
+//First EEPROM 
+//Program data bytes 
+Srial.print("Programming EEPROM")
+for (int address = 0; address < sizeof(data)/sizeof(data[0]); address +=1) {
+        writeEEPROM(address, data[address] >> 8);
+ 
+        if (address % 64 == 0) {
+                Serial.print(".");
+        }
+ }
+ Serial.println("done");
+ 
+ 
+ 
 
-
-
+        
