@@ -76,8 +76,11 @@ unit16_t UCODE_TEMPLATE[16][8] = {
   {MI|CO, RO|II|CE, HLT,   0,     0,            0, 0, 0},         // 1111 - HLT  
 };
 
-unit16_t ucode[4][128];
-
+           ZF/CF   16 Instructions   
+               |   |
+unit16_t ucode[4][16][8];
+                      |
+                    8 Steps   
 void initUcode() {
   // ZF = 0, CF = 0
   memcpy(ucode[FLAGS_Z0C0], UCODE_TEMPLATE, sizeof(UCODE_TEMPLATE));
