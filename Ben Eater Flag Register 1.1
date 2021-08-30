@@ -1,16 +1,36 @@
-                      JUMP Instruction 
-                      /               \
-               JUMP if zero       JUMP on carry          
-                                  JUMP if Carry bit turns on  
+                       JUMP Instruction 
+ # 1
+    JUMP on carry          
+    JUMP if Carry bit turns on cause 8 bits can't be represented 
                                   
-                                  200 =   1100 1000
-                                 +100 =   0110 0100
-                                 ------------------
-                                  300 = 1 0010 1100
-                                        |     |
-                                 carry bit    44 
-                        
-                        Flags Register 
+     200 =   1100 1000
+    +100 =   0110 0100
+     ------------------
+     300 = 1 0010 1100
+           |     |
+    carry bit    44 
+    *JUMP 
+    
+    254 =   1111 1110
+    +  3 =   0000 0011
+     ------------------
+     257 = 1 0000 0001
+           |     |
+    carry bit    1  
+    *JUMP
+    
+ #  2
+    JUMP if zero 
+    JUMP if Carry bit turns off
+    
+    Circuit :
+    4 NOR Gates ===> 2 AND Gates ===> 1 AND Gate 
+   
+                         
+                     Flags Register 
+   Store the Status of Carry bit when ALU keep Cycling 
+   Store result of Addition 
+            
                         
          
                         
