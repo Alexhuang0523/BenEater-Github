@@ -99,7 +99,7 @@ Srial.print("Programming EEPROM")
     int flags       = (address & 0b1100000000) >> 8;
     int byte_sel    = (address & 0b0010000000) >> 7;
     int instruction = (address & 0b0001111000) >> 3;
-    int step        = (address & 0b0000000111) 
+    int step        = (address & 0b0000000111);
     
     if (byte_sel) {
       writeEEPROM(address, ucode[flags][instruction][step]);
@@ -114,7 +114,7 @@ void printContents(int start, int length) {
       data[offset] = readEEPROM(base + offset);
     }
 
-Srial.print("Reading EEPROM")
+Srial.print("Reading EEPROM");
 printContent(0, 1024);
 
   
