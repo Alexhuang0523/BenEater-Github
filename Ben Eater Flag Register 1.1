@@ -90,8 +90,33 @@ void initUcode() {
   memcpy(ucode[FLAGS_Z1C0], UCODE_TEMPLATE, sizeof(UCODE_TEMPLATE));
   // ZF = 1, CF = 1
   memcpy(ucode[FLAGS_Z1C1], UCODE_TEMPLATE, sizeof(UCODE_TEMPLATE));
-  
-  
+
+
+//Program data bytes for 2 EEPROM 
+Srial.print("Programming EEPROM")
+//First half of EEPROM (128 bytes) ---> Low --- related to Chip Pin
+ for (int address = 0; address < 1024; address +=1) {
+    int flags       = (address & 0b1100000000) >> 8;
+    int byte_sel    = (address & 0b0010000000) >> 7;
+    int instruction = (address & 0b0001111000) >> 3;
+    int step        = (address & 0b0000000111) 
+    
+    if (byte_sel) {
+      writeEEPROM(address, ucode[flags][instruction][step]);
+    } else {
+      writeEEPROM(address, ucode[flags][instruction][step] >> 8);
+    } 
+
+void printContents(int start, int length) {
+  for (int base = start; base <= length; base += 16) {
+    byte data[16];
+    for (int offset = 0; offset <= 15; offset += 1) {
+      data[offset] = readEEPROM(base + offset);
+    }
+
+Srial.print("Reading EEPROM")
+printContent(0, 1024);
+
   
   
   
