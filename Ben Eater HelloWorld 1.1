@@ -28,19 +28,19 @@ LED Light + A0-A15 + Resistors ===> Ground
 
                           Programming in Arduino Mega 
                   
-      16 Addressline pin numbers from "Arduino Mega digital I/O pins"
+//16 Addressline pin numbers from "Arduino Mega digital I/O pins"
 const char ADDR[] = {22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52} 
 
-      8 Dataline pin numbers from "Arduino Mega digital I/O pins"
+//8 Dataline pin numbers from "Arduino Mega digital I/O pins"
 const char DATA[] = {39, 41, 43, 45, 47, 49, 51, 53} 
 
-      We "compute and print" the "Data" in the form of "Hexidecimal" instaed of "Binary"
-Program : %04x   %c   %02x 
-          digitalRead(ADDR[n])?1:0
-                        No negative figues 
-Program : unsigned int address = 0;
-          Computing means an act or process of calculating an answer by using machine 
-Program : address = (address << 1) + bit;  
+//We "compute and print" the "Data" in the form of "Hexidecimal" instaed of "Binary"
+%04x   %c   %02x 
+digitalRead(ADDR[n])?1:0
+//No negative figues 
+unsigned int address = 0;
+//Computing means an act or process of calculating an answer by using machine 
+address = (address << 1) + bit;  
 
 % means Binary 
 x means Hexidecimal
@@ -48,7 +48,8 @@ x means Hexidecimal
 %04x means 4 Hex-number digits (Addressline)
 %02x means 2 Hex-number digits (Dataline)
 
-Program : serial.print("    ") means "Space"
+//Space
+serial.print("    ") 
 
 At this moment, Microprocessor is reading "Data" but which is meaningless 
 reading "Garbage" 
