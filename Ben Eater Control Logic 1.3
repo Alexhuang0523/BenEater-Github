@@ -59,7 +59,7 @@ unit16_t data[] = {
 
  
 //Program data bytes for 2 EEPROM 
-Srial.print("Programming EEPROM")
+Serial.print("Programming EEPROM")
 //First half of EEPROM (128 bytes) ---> Low --- related to Chip Pin
 for (int address = 0; address < sizeof(data)/sizeof(data[0]); address +=1) {
         writeEEPROM(address, data[address] >> 8);
