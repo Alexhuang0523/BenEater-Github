@@ -41,6 +41,8 @@ digitalRead(ADDR[n])?1:0
 unsigned int address = 0;
 //After reading 16 all pins shifting to be 1 digit 
 address = (address << 1) + bit;  
+//Read or write data 
+digitalRead(READ_WRITE)?'r':'W'
 
 % means Binary 
 x means Hexidecimal
