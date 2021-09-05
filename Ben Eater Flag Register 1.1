@@ -94,7 +94,7 @@ void initUcode() {
 }
 
 //Program data bytes for 2 EEPROM 
-Srial.print("Programming EEPROM")
+Serial.print("Programming EEPROM")
 //First half of EEPROM (128 bytes) ---> Low --- related to Chip Pin
  for (int address = 0; address < 1024; address +=1) {
     int flags       = (address & 0b1100000000) >> 8;
@@ -115,7 +115,7 @@ void printContents(int start, int length) {
       data[offset] = readEEPROM(base + offset);
     }
 
-Srial.print("Reading EEPROM");
+Serial.print("Reading EEPROM");
 printContent(0, 1024);
 
   
