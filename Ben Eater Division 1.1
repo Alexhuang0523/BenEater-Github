@@ -7,9 +7,21 @@ Carry bit  Mod10   Mod10+1    Value    Value+1
     
   32 bits/4 bytes store under RAM 
   
-1.      Set Carry Bit 
-2.      Substract 
-3.      If Dividend > Divisor 
+                  Set Carry Bit 
+                        |
+                    Substract 
+                        |
+              If Dividend > Divisor 
         Mod10    2bytes ----> Register Y
         Mod10+1  2bytes ----> Register A 
         Register Y + Register A = Result
+                        |
+              If Dividend < Divisor 
+       Ignore the results, Carry flag = 0
+                        |
+    Store 16(Times for Rotation) to Register X
+                        |
+                 Clear Remainder 
+                 
+                 
+              
