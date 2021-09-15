@@ -1,0 +1,15 @@
+               How CPU executes Division 
+               
+Shift Left + Substract with Carry Bit + Conditional (Carry Flag)
+
+Carry bit  Mod10   Mod10+1    Value    Value+1
+    0      0000000000000000   0000000000000000
+    
+  32 bits/4 bytes store under RAM 
+  
+1.      Set Carry Bit 
+2.      Substract 
+3.      If Dividend > Divisor 
+        Mod10    2bytes ----> Register Y
+        Mod10+1  2bytes ----> Register A 
+        Register Y + Register A = Result
