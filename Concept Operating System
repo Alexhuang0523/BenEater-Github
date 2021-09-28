@@ -14,10 +14,20 @@ Memory Protection (Isolated)
                                    - Decoding Compression Video
                                    - Graphics Operations 
                                    
-        Cache (Inside CPU to solve the Speed of Data)
-        Cache Hit  (Using Cache)
-        Cache Miss (Using RAM)
-        Dirty Bit  (Used to check if the Cache is full)
-                                   
-                       
+Cache (Inside CPU to solve the Speed of Data)
+Cache Hit  (Using Cache)
+Cache Miss (Using RAM)
+Dirty Bit  (Used to check if the Cache is full)
+
+Out-of-order Execution 
+Jump Negative 
+
+Conditional Jump 
+Speculative Execution 
+Pipeline Flush 
+Branch Prediction 
+
+Assembler 
+Compiler  FORTRAN formula translation (Only able to run in single type of Computer) 
+          Common Business-Oriented Language (Able to run in a different type of Computer)
 
