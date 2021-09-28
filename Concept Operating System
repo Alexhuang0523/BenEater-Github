@@ -6,5 +6,18 @@ Physical Memory Address + Virtual Memory Address (For OS to run simultaneously)
 
 Memory Protection (Isolated)
 
-
+                        CPU (Clock)
+                Dynamic Frequency Scaling 
+                   /                \
+         Overclocking              Underclocking 
+                                   - Encrypting Files 
+                                   - Decoding Compression Video
+                                   - Graphics Operations 
+                                   
+        Cache (Inside CPU to solve the Speed of Data)
+        Cache Hit  (Using Cache)
+        Cache Miss (Using RAM)
+        Dirty Bit  (Used to check if the Cache is full)
+                                   
+                       
 
