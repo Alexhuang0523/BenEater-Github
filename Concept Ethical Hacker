@@ -14,4 +14,12 @@ Advanced TCP/IP
 Crypto-Graphy
 Reverse Engineering 
  
- 
+
+Physical Layer ---------> Sniffing 
+Data Link Layer --------> Spoofing 
+Network Layer ----------> Man-n-the-middle            
+Transport Layer --------> Reconnaissance/DOS            
+Session Layer ----------> Hijacking             
+Presentation Layer -----> Phishing        
+Application Layer ------> Exploit 
+
