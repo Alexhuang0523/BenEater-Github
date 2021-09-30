@@ -20,14 +20,11 @@ JIT & AOT
     Doing least amount of work to accomplish goal                   
         
 
-                    Compiler 
-                        |
-           Language-dependent Stages 
-                 (Syntax rules) 
-                        |
-            Machine-dependent Stages 
-              (Register Allocation)
-                        |
+                Compiler Workings 
+                        
+Language-dependent Stages ----> Machine-dependent Stages 
+      (Syntax rules)             (Register Allocation)
+                       
                 Lexical Analysis
                     (Tokens) 
             (Integer Representation) 
@@ -39,7 +36,10 @@ JIT & AOT
                         |
               Instruction Selection 
                         |
-                 
+             Internal Representation 
+                    (Assembly) 
+                        |
+               Register Allocation 
                  
                  
                
