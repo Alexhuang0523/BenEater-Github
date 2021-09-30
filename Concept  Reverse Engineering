@@ -19,4 +19,28 @@ JIT & AOT
  Optimization 
     Doing least amount of work to accomplish goal                   
         
-       
+
+                    Compiler 
+                        |
+           Language-dependent Stages 
+                 (Syntax rules) 
+                        |
+            Machine-dependent Stages 
+              (Register Allocation)
+                        |
+                Lexical Analysis
+                    (Tokens) 
+            (Integer Representation) 
+                        |
+                     Parsing 
+             (Abstract Syntax Tree)
+                        |
+                 Semantic Analysis 
+                        |
+              Instruction Selection 
+                        |
+                 
+                 
+                 
+               
+
