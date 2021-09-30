@@ -40,7 +40,8 @@ Language-dependent Stages ----> Machine-dependent Stages
                     (Assembly) 
                         |
                Register Allocation 
-                 
-                 
-               
-
+                        |
+                 Code Generation 
+                        |
+                Assembly + Linking 
+                
