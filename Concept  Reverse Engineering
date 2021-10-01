@@ -25,9 +25,9 @@ JIT & AOT
 Language-dependent Stages ----> Machine-dependent Stages 
       (Syntax rules)             (Register Allocation)
                        
-                Lexical Analysis
+                Lexical Analysis --------> Check any invalid tokens 
                     (Tokens) 
-            (Integer Representation) 
+      (Integer/Regular Representation) ----> describing a set of Character Strings 
                         |
                      Parsing 
              (Abstract Syntax Tree)
