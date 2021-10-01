@@ -25,10 +25,11 @@ JIT & AOT
 Language-dependent Stages ----> Machine-dependent Stages 
       (Syntax rules)             (Register Allocation)
                        
-            Lexical Analysis/Scanner --------> Check any invalid tokens(Lexical Errors,Syntax Errors) 
-                 (Tokens class) 
-      (Integer/Regular Representation) ----> describing a set of Character Strings 
-                (Grammar Rules)
+                  Lexical Analysis 
+                      - done by lexer 
+                      - identifies lexemes 
+                      - generates stream of tokens (Regular representation)
+                      - creates symbol & string table
                         |
                      Parsing 
              (Abstract Syntax Tree)
