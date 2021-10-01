@@ -26,13 +26,12 @@ Language-dependent Stages ----> Machine-dependent Stages
       (Syntax rules)             (Register Allocation)
                        
                   Lexical Analysis 
-                      - done by lexer 
+                      - done by lexer (Scanner)
                       - identifies lexemes 
                       - generates stream of tokens (Regular representation)
                       - creates symbol & string table
                         |
-                     Parsing 
-             (Abstract Syntax Tree)
+               Parsing/Syntax Analysis
                         |
                  Semantic Analysis 
                         |
