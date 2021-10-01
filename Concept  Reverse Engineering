@@ -32,6 +32,8 @@ Language-dependent Stages ----> Machine-dependent Stages
                       - creates symbol & string table
                         |
                Parsing/Syntax Analysis
+                      - Context-free grammar Backus-Naur form (written by programmer)
+                      - identifies Syntax errors 
                         |
                  Semantic Analysis 
                         |
