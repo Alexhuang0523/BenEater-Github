@@ -26,7 +26,7 @@ Language-dependent Stages ----> Machine-dependent Stages
       (Syntax rules)             (Register Allocation)
                        
             Lexical Analysis/Scanner --------> Check any invalid tokens(Lexical Errors,Syntax Errors) 
-                    (Tokens) 
+                 (Tokens class) 
       (Integer/Regular Representation) ----> describing a set of Character Strings 
                 (Grammar Rules)
                         |
