@@ -34,6 +34,7 @@ Language-dependent Stages ----> Machine-dependent Stages
                Parsing/Syntax Analysis
                       - Context-free grammar Backus-Naur form (written by programmer)
                       - identifies Syntax errors 
+                      - Parsing/Concrete Syntax tree
                         |
                  Semantic Analysis 
                         |
