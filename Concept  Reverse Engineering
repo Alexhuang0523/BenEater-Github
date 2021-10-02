@@ -26,26 +26,28 @@ Language-dependent Stages ----> Machine-dependent Stages
       (Syntax rules)             (Register Allocation)
                        
                   Lexical Analysis 
-                      - done by lexer (Scanner)
-                      - identifies lexemes 
-                      - generates stream of tokens (Regular representation)
-                      - creates symbol & string table
+                      - Done by lexer (Scanner)
+                      - Identifies lexemes 
+                      - Generates stream of tokens (Regular representation)
+                      - Creates symbol & string table
                         |
                Parsing/Syntax Analysis
+                  Semantic Analysis
                       - Context-free grammar Backus-Naur form (written by programmer)
-                      - identifies Syntax errors 
-                      - Parsing/Concrete Syntax tree
+                      - Identifies Syntax errors 
+                           - Operators, Identifiers 
+                      - Concrete/Abstract Syntax tree
                         |
-                 Semantic Analysis 
+                Intermediate Code 
+                      - Three Address Code
+                      - Backpatching
+                      - Basic Blocks
+                        
+                                 
+              Object Code Genertions 
+               Instruction Selection 
                         |
-              Instruction Selection 
-                        |
-             Internal Representation 
-                    (Assembly) 
-                        |
-               Register Allocation 
-                        |
-                 Code Generation 
-                        |
-                Assembly + Linking 
-                
+           
+           
+           
+           
