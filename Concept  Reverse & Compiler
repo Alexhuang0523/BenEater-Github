@@ -22,8 +22,7 @@ JIT & AOT
 
                     Compiler
                        |
-               made by Command line
-    How it works depends on Processor Architecture 
+               made by Command line  
                         
 Language-dependent Stages ----> Machine-dependent Stages 
       (Syntax rules)             (Register Allocation)
@@ -51,6 +50,13 @@ Language-dependent Stages ----> Machine-dependent Stages
                         
                                  
                Object Code Genertions 
+               
+ How Compiler works depends on Processor Architecture    
+ 
+                 RICS           CISC
+                 EAsy          Comples
+               2 Address      3 Address 
+              
                 Instruction Selection 
                         |
             
