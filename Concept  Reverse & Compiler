@@ -31,7 +31,8 @@ Language-dependent Stages ----> Machine-dependent Stages
                       - Generates stream of tokens (Regular representation)
                       - Creates symbol & string table
                         |
-               Parsing/Syntax Analysis
+                   Syntax Analysis
+                      - Done by parser 
                   Semantic Analysis
                       - Context-free grammar Backus-Naur form (written by programmer)
                       - Identifies Syntax errors 
