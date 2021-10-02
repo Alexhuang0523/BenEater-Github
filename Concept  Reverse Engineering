@@ -20,7 +20,7 @@ JIT & AOT
     Doing least amount of work to accomplish goal                   
         
 
-                Compiler Workings 
+                Compiler (made by Command line) 
                         
 Language-dependent Stages ----> Machine-dependent Stages 
       (Syntax rules)             (Register Allocation)
