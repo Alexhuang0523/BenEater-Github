@@ -20,7 +20,9 @@ JIT & AOT
     Doing least amount of work to accomplish goal                   
         
 
-                Compiler (made by Command line) 
+                    Compiler 
+               made by Command line
+        depends on processor Architecture 
                         
 Language-dependent Stages ----> Machine-dependent Stages 
       (Syntax rules)             (Register Allocation)
@@ -50,7 +52,7 @@ Language-dependent Stages ----> Machine-dependent Stages
                Object Code Genertions 
                 Instruction Selection 
                         |
-           
+            
            
            
            
