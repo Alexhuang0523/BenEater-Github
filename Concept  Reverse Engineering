@@ -44,8 +44,8 @@ Language-dependent Stages ----> Machine-dependent Stages
                       - Basic Blocks
                         
                                  
-              Object Code Genertions 
-               Instruction Selection 
+               Object Code Genertions 
+                Instruction Selection 
                         |
            
            
