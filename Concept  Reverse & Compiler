@@ -20,9 +20,10 @@ JIT & AOT
     Doing least amount of work to accomplish goal                   
         
 
-                    Compiler 
+                    Compiler
+                       |
                made by Command line
-        depends on processor Architecture 
+    How it works depends on Processor Architecture 
                         
 Language-dependent Stages ----> Machine-dependent Stages 
       (Syntax rules)             (Register Allocation)
