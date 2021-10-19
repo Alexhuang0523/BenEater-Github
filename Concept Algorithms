@@ -1,5 +1,7 @@
                     Algorithms
-                   *Treehouse* 
+                   /          \
+     Time complexity           Space complexity (Memory)
+
 
 Search Algorithms
 Rage 1 - 100 
@@ -19,20 +21,17 @@ B : 5,8,9,10
 take 4 tries to get answers
 
 Conclusion :
-There is no best way to get answers
-It depends on the situations
+There is no best way to get answers, It depends on the situations
 Tries = Seconds
 
 
-Clear Problem Statement
-Input
-Output (produce a result)
-Specific Order 
-Complete in a finite time 
+                  Coding Website
+                    Treehouse 
 
-Time complexity
-Space complexity (Memory)
+- Clear Problem Statement
+- Input
+- Output (produce a result)
+- Specific Order 
+- Complete in a Finite Time 
 
-Runtime 
-Constant time to read
 
