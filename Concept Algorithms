@@ -1,9 +1,10 @@
-Algorithms
+                    Algorithms
+                   *Treehouse* 
 
 Search Algorithms
-Rage 1 - 100
-Answer is 5
+Rage 1 - 100 
 
+Answer is 5
 A : 1,2,3,4,5  
 take 5 tries to get answers
 B : 60,50,25,15,4,6,5 
@@ -11,6 +12,7 @@ take 7 tries to get answers
 
 Rage 1 - 10
 Answer is 10
+
 A : 1,2,3,4,5,6,7,8,9,10  
 take 10 tries to get answers
 B : 5,8,9,10
@@ -30,7 +32,6 @@ Complete in a finite time
 
 Time complexity
 Space complexity (Memory)
-
 
 Runtime 
 Constant time to read
