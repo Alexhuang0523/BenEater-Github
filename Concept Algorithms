@@ -20,8 +20,9 @@ Linear Search takes 10 tries to get answers
 Binary Search takes 4 tries to get answers
 
 Conclusion :
-There is no best way to get answers, It depends on the situations
+There is no best way to get answers, It depends on the context 
 Tries = Seconds
+n = size of the context 
 
 
 - Clear Problem Statement
