@@ -11,7 +11,7 @@ Things to learn to become an Ethical Hacker
         Web Application -----------> Banking Sytem, Bitcoin Website   
             Forensics
         Advanced TCP/IP 
-         Crypto-Graphy
+         Crypto-Graphy ------------> Plaintext/Ciphertext 
        Reverse Engineering 
  
  
@@ -23,16 +23,20 @@ Session Layer ----------> Hijacking
 Presentation Layer -----> Phishing        
 Application Layer ------> Exploit 
 
-
-      Neil's Twitch Stream 
-            Website   
+             Website
+             
+Neil's Twitch Stream 
 https://ine.com
-  - Penetration Testing Essentials 
-  - Networking Essentials
-  - IT Essentials 
-  
+      
 Hack the box 
 Try hack me 
 CTF Time 
 Home labs 
-
+      
+      
+Penetration Testing Essentials 
+  White box (Private Information)  
+  Black box (Public Information) 
+Networking Essentials
+IT Essentials 
+  
