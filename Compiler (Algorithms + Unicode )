@@ -28,3 +28,21 @@ JIT & AOT
     Doing least amount of work to accomplish goal                   
         
           
+                  Teletype Machine 
+                  Teletype Protocol 
+
+                      Terminal 
+                    Application 
+                         |
+               Bash ~ Shell (Language) 
+                         |
+                       Kernel 
+
+Input/Output Subsystem 
+Mouse, Monitor, Keyboard, Internet Radio 
+
+All these includes programming language written by Human 
+such as JAVA, C++, C 
+They are compiled by compiler and stored in Memory 
+
+
