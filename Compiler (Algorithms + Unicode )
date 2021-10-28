@@ -6,8 +6,8 @@ Compiler is just a Programme with Computer Model and Algorithm
 
 JAVA Source Code 
                 ByteCode
-            Intermedia code ----> Human and Computer can't read 
-                   |              only JVM can read     
+            Intermedia code ----> Human & Computer can't read 
+                   |              only Virtual Machine can read     
                    |    Native code 
                    |          |    Machine Code         
                    |          |    (Object file)  
@@ -19,9 +19,10 @@ JAVA Source Code
                                                     Executable file 
                                                     
 HEAP  
-   Memory area of JVM
-JIT & AOT 
- | Place where transfer High-level language to Low-level language
+    Memory area of JVM
+Just-In-Time & AOT 
+ |  Place where transfer High-level language to Low-level language 
+ |  No need to retranslate for the same code 
  |
  Inlining 
     Same Target Type (Run target code directly)
