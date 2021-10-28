@@ -5,7 +5,9 @@
 Compiler is just a Programme with Computer Model and Algorithm
 
 JAVA Source Code 
-                ByteCode 
+                ByteCode
+            Intermedia code ----> Human and Computer can't read 
+                   |              only JVM can read     
                    |    Native code 
                    |          |    Machine Code         
                    |          |    (Object file)  
