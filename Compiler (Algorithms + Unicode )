@@ -39,13 +39,19 @@ Just-In-Time & AOT
                          |
                Bash ~ Shell (Language) 
                          |
-                       Kernel (BIOS) Command 
-
+                       Kernel (BIOS) 
+                             
+ 
+ Command ----> @ = Withdraw 
+               # = Load
+ 
+ 
 Input/Output Subsystem 
 Mouse, Monitor, Keyboard, Internet Radio 
 
 All these includes programming language written by Human 
 such as JAVA, C++, C 
 They are compiled by compiler and stored in Memory 
+
 
 
