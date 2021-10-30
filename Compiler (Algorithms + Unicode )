@@ -40,7 +40,12 @@ Just-In-Time & AOT
                Bash ~ Shell (Language) 
                          |
                        Kernel (BIOS) 
-                             
+ 
+ 
+ Command 
+    Collection of several instructions in a specific order 
+ Instruction
+    Single line code that performs an operation 
  
  Command ----> @ = Withdraw 
                # = Load
