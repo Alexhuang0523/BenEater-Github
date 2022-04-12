@@ -1,4 +1,15 @@
-                       Basic Element 
+              Lexical Specification 
+                       |
+                Regular Expression 
+                       |
+                      NFA
+                       |
+                      DFA
+                       |
+       Table-driven Implemantation of DFA 
+                       
+                       
+                      Basic Element 
 Operator-----> ++><-==
 White Space-----> \t\n\
 Keywords------> Identifier if...else
@@ -43,4 +54,3 @@ State   Input
   B       1
            | ---->Accept          
          
-              
