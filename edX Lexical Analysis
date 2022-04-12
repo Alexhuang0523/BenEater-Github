@@ -48,6 +48,10 @@ letter++ '@' letter++ '.' letter++ '.' letter++
 ERROR = [all strings not in the Lexical Specification] 
 
                     Finite Automaton 
+States 
+Start State 
+Final Sate 
+
 State   Input 
   A       1  
          | 
