@@ -1,0 +1,18 @@
+                      Parsing (Top-Down Parsing)
+Context free Grammar 
+-Set of Terminals T
+-Set of Non-Terminals N
+-Start Symbol 
+-Set of Productions 
+
+           Algorithms for Parsing (Recursive Descent Parsing)
+-from LEFT to RIGHT 
+-from TOP to BOTTOM
+
+ 
+                Limitation for Recursive Descent Parsing 
+-No backtracking to try different productions once we have found a production that succeeds for non-terminal 
+-Infinite Loop(Left Recursion) when S=Non terminal 
+-Infinite Loop(Left Recursion) can be eliminated by hand,thus this limitation is not major  
+ 
+
