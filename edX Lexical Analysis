@@ -47,7 +47,7 @@ letter++ '@' letter++ '.' letter++ '.' letter++
 
 ERROR = [all strings not in the Lexical Specification] 
 
-                    Finite Automaton 
+                   **Finite Automaton** 
 States 
 Start State 
 Final Sate 
