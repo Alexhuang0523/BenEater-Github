@@ -17,6 +17,7 @@ Context free Grammar
 Derivation = Sequence of Productions 
                      
 Grammar is Ambiguous if it has more than one parse tree 
+Divide(rewrite) Production into two classes to avoid ambiguity
 Instead of rewrite the Grammar 
 - Use the more Natural(Ambigious)Grammar 
 - Along with disambiguating Associativity and Precedence Declaration 
